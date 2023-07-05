@@ -11,11 +11,18 @@ node_modules
 # Logs
 logs
 *.log
+pnpm-lock.json*
 
 # Misc
 .DS_Store
 .fleet
 .idea
+.vscode
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
 
 # Local env files
 .env
