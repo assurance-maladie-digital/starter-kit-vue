@@ -4,5 +4,6 @@
     <v-btn variant="tonal">
       Button
     </v-btn>
+    <ContentDoc />
   </div>
 </template>
