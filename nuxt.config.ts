@@ -2,7 +2,12 @@ import { aliases, mdi } from 'vuetify/iconsets/mdi'
 
 export default defineNuxtConfig({
   devtools: { enabled: true },
-  modules: ['@invictus.codes/nuxt-vuetify'],
+
+  modules: [
+    '@invictus.codes/nuxt-vuetify',
+    '@pinia/nuxt',
+  ],
+
   vuetify: {
     /* vuetify options */
     vuetifyOptions: {
@@ -25,5 +30,13 @@ export default defineNuxtConfig({
       autoImport: true,
       importLabComponents: true,
     },
-  }
+  },
+
+  imports: {
+    dirs: ['./stores'],
+  },
+  
+  pinia: {
+    autoImports: ['defineStore', 'acceptHMRUpdate'],
+  },
 });
