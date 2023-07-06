@@ -25,5 +25,8 @@ export default defineNuxtConfig({
       autoImport: true,
       importLabComponents: true,
     },
-  }
+  },
+  css: [
+		'~/assets/styles/index.scss'
+	],
 });
