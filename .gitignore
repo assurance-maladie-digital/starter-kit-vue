@@ -11,7 +11,7 @@ node_modules
 # Logs
 logs
 *.log
-pnpm-lock.json*
+pnpm-lock.yaml*
 
 # Misc
 .DS_Store
