@@ -1,42 +1,39 @@
-import { aliases, mdi } from 'vuetify/iconsets/mdi'
+import { aliases, mdi } from 'vuetify/iconsets/mdi';
 
 export default defineNuxtConfig({
-  devtools: { enabled: true },
+	devtools: { enabled: true },
 
-  modules: [
-    '@invictus.codes/nuxt-vuetify',
-    '@pinia/nuxt',
-  ],
+	modules: ['@invictus.codes/nuxt-vuetify', '@pinia/nuxt'],
 
-  vuetify: {
-    /* vuetify options */
-    vuetifyOptions: {
-      icons: {
-        defaultSet: 'mdi',
-        aliases,
-        sets: {
-          mdi,
-        },
-      },
-    },
+	vuetify: {
+		/* vuetify options */
+		vuetifyOptions: {
+			icons: {
+				defaultSet: 'mdi',
+				aliases,
+				sets: {
+					mdi,
+				},
+			},
+		},
 
-    moduleOptions: {
-      /* nuxt-vuetify module options */
-      treeshaking: true,
-      useIconCDN: true,
+		moduleOptions: {
+			/* nuxt-vuetify module options */
+			treeshaking: true,
+			useIconCDN: true,
 
-      /* vite-plugin-vuetify options */
-      styles: true,
-      autoImport: true,
-      importLabComponents: true,
-    },
-  },
+			/* vite-plugin-vuetify options */
+			styles: true,
+			autoImport: true,
+			importLabComponents: true,
+		},
+	},
 
-  imports: {
-    dirs: ['./stores'],
-  },
-  
-  pinia: {
-    autoImports: ['defineStore', 'acceptHMRUpdate'],
-  },
+	imports: {
+		dirs: ['./stores'],
+	},
+
+	pinia: {
+		autoImports: ['defineStore', 'acceptHMRUpdate'],
+	},
 });
