@@ -1,18 +1,18 @@
 {
-  "name": "nuxt-app",
-  "private": true,
-  "scripts": {
-    "build": "nuxt build",
-    "dev": "nuxt dev",
-    "generate": "nuxt generate",
-    "preview": "nuxt preview",
-    "postinstall": "nuxt prepare"
-  },
-  "devDependencies": {
-    "@invictus.codes/nuxt-vuetify": "^0.2.23",
-    "@nuxt/content": "^2.7.0",
-    "@nuxt/devtools": "latest",
-    "@types/node": "^18",
-    "nuxt": "^3.6.1"
-  }
+	"name": "nuxt-app",
+	"private": true,
+	"scripts": {
+		"build": "nuxt build",
+		"dev": "nuxt dev",
+		"generate": "nuxt generate",
+		"preview": "nuxt preview",
+		"postinstall": "nuxt prepare"
+	},
+	"devDependencies": {
+		"@invictus.codes/nuxt-vuetify": "^0.2.23",
+		"@nuxt/content": "^2.7.0",
+		"@nuxt/devtools": "latest",
+		"@types/node": "^18",
+		"nuxt": "^3.6.1"
+	}
 }
