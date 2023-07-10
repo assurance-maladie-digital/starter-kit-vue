@@ -6,12 +6,17 @@
 		"dev": "nuxt dev",
 		"generate": "nuxt generate",
 		"preview": "nuxt preview",
-		"postinstall": "nuxt prepare"
+		"postinstall": "nuxt prepare",
+		"test": "vitest --dom",
+		"coverage": "vitest run --coverage"
 	},
 	"devDependencies": {
 		"@invictus.codes/nuxt-vuetify": "^0.2.23",
 		"@nuxt/devtools": "latest",
 		"@types/node": "^18",
-		"nuxt": "^3.6.1"
+		"happy-dom": "^10.0.5",
+		"nuxt": "^3.6.1",
+		"nuxt-vitest": "^0.9.0",
+		"vitest": "^0.33.0"
 	}
 }
