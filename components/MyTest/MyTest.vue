@@ -1,5 +1,3 @@
 <template>
-  <div>
-	Test component
-  </div>
+	<div>Test component</div>
 </template>
