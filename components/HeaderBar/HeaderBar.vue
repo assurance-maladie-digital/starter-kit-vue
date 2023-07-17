@@ -8,9 +8,9 @@
 			ref="appBar"
 			v-scroll:[targetSelector]="onScroll"
 			:height="height"
-			:fixed="sticky"
 			role="banner"
 			class="vd-header-bar transition-ease-in-out"
+			:class="{ 'vd-header-bar--sticky': sticky }"
 		>
 			<VSheet
 				v-bind="config.contentSheet"
@@ -22,10 +22,9 @@
 					v-bind="config.innerSheet"
 					:width="innerWidth"
 				>
-					AppHeader
-					<!-- <slot name="logo">
+					<slot name="logo">
 						<LogoBrandSection
-							v-bind="options.brandSection"
+							v-bind="config.brandSection"
 							:theme="theme"
 							:service-title="serviceTitle"
 							:service-sub-title="serviceSubTitle"
@@ -47,7 +46,7 @@
 						v-bind="config.spacer"
 					/>
 
-					<slot /> -->
+					<slot />
 				</VSheet>
 			</VSheet>
 		</VAppBar>
@@ -55,7 +54,7 @@
 </template>
 
 <script setup lang="ts">
-import { ref, computed, PropType } from 'vue';
+import { reactive, computed, PropType } from 'vue';
 import { useDisplay } from 'vuetify';
 
 import { config } from './config';
@@ -115,9 +114,15 @@ const props = defineProps({
 
 const { smAndDown } = useDisplay();
 
-const drawer: boolean | null = ref(null);
-const tab: number | null = ref(null);
-const scrolled = ref(false);
+const drawer = reactive({
+	value: false
+});
+const tab = reactive({
+	value: null
+});
+const scrolled = reactive({
+	value: false
+});
 
 const isMobileVersion = computed(() => {
 	if (props.mobileVersion) {
@@ -186,25 +191,31 @@ const showSpacer = computed(() => {
 });
 
 function updateDrawer(value: boolean): void {
-	this.drawer = value;
+	drawer = value;
 }
 
 function onScroll(e: MouseEvent): void {
-	if (!this.sticky) {
+	if (!sticky) {
 		return;
 	}
 
 	const target = e.currentTarget as HTMLElement | Window;
-	const header = this.$refs.appBar.$el;
+	const header = $refs.appBar.$el;
 	const headerHeight = header?.clientHeight || 0;
 	const scrollPosition = target === window ? window.scrollY : (target as HTMLElement).scrollTop;
 
-	this.scrolled = this.sticky && scrollPosition > headerHeight;
+	scrolled = sticky && scrollPosition > headerHeight;
 }
 </script>
 
-<style lang="scss" scoped>
+<style scoped>
 .vd-header-bar {
-	z-index: 1;
+	position: relative !important;
+}
+.vd-header-bar--sticky {
+	position: fixed !important;
+	top: 0;
+	left: 0;
+	right: 0;
 }
 </style>
