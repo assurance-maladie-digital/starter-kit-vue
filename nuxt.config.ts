@@ -2,10 +2,7 @@ import { aliases, mdi } from 'vuetify/iconsets/mdi';
 
 export default defineNuxtConfig({
 	devtools: { enabled: true },
-	modules: [
-		'@invictus.codes/nuxt-vuetify',
-		'dayjs-nuxt'
-	],
+	modules: ['@invictus.codes/nuxt-vuetify', '@nuxt/content', 'dayjs-nuxt'],
 	vuetify: {
 		/* vuetify options */
 		vuetifyOptions: {
