@@ -208,14 +208,14 @@ function onScroll(e: MouseEvent): void {
 }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 .vd-header-bar {
 	position: relative !important;
-}
-.vd-header-bar--sticky {
-	position: fixed !important;
-	top: 0;
-	left: 0;
-	right: 0;
+	&--sticky {
+		position: fixed !important;
+		top: 0;
+		left: 0;
+		right: 0;
+	}
 }
 </style>
