@@ -5,6 +5,7 @@ specifiers:
   '@nuxt/content': ^2.7.0
   '@nuxt/devtools': latest
   '@types/node': ^18
+  dayjs-nuxt: ^1.1.2
   nuxt: ^3.6.1
   sass: ^1.63.6
 
@@ -13,6 +14,7 @@ devDependencies:
   '@nuxt/content': 2.7.0
   '@nuxt/devtools': 0.6.7_nuxt@3.6.1
   '@types/node': 18.16.19
+  dayjs-nuxt: 1.1.2
   nuxt: 3.6.1_s3dqxh4ls26dflp6mklu4tks4q
   sass: 1.63.6
 
@@ -2593,6 +2595,20 @@ packages:
   /data-uri-to-buffer/4.0.1:
     resolution: {integrity: sha512-0R9ikRb668HB7QDxT1vkpuUBtqc53YyAwMwGeUFKRojY/NWKvdZ+9UYtRfGmhqNbRkTSVpMbmyhXipFFv2cb/A==}
     engines: {node: '>= 12'}
+    dev: true
+
+  /dayjs-nuxt/1.1.2:
+    resolution: {integrity: sha512-hYcAS7MLkfqU6lrUV12HUtckFE8OkqtIKIaII31zCTg+tH63DOy8yHat/TgkepgbjSmvYHH/uzXtub8oKYU5Gg==}
+    dependencies:
+      '@nuxt/kit': 3.6.1
+      dayjs: 1.11.9
+    transitivePeerDependencies:
+      - rollup
+      - supports-color
+    dev: true
+
+  /dayjs/1.11.9:
+    resolution: {integrity: sha512-QvzAURSbQ0pKdIye2txOzNaHmxtUBXerpY0FJsFXUMKbIZeFm5ht1LS/jFsrncjnmtv8HsG0W2g6c0zUjZWmpA==}
     dev: true
 
   /debug/2.6.9:
