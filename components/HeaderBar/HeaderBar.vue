@@ -209,13 +209,27 @@ function onScroll(e: MouseEvent): void {
 </script>
 
 <style lang="scss" scoped>
-.vd-header-bar {
-	position: relative !important;
-	&--sticky {
-		position: fixed !important;
-		top: 0;
-		left: 0;
-		right: 0;
+	.vd-header-bar {
+		position: relative !important;
+		&--sticky {
+			position: fixed !important;
+			top: 0;
+			left: 0;
+			right: 0;
+		}
 	}
-}
+	.vd-header-bar :deep(.v-toolbar__content) {
+			display: block;
+			padding: 0;
+		}
+
+	.vd-header-menu-btn :deep() {
+		.v-btn__content {
+			flex-direction: column;
+		}
+
+		.v-icon {
+			margin: 0 !important;
+		}
+	}
 </style>
