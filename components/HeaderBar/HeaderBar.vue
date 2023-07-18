@@ -54,158 +54,158 @@
 </template>
 
 <script setup lang="ts">
-import { reactive, computed, PropType } from 'vue';
-import { useDisplay } from 'vuetify';
+	import { reactive, computed, PropType } from 'vue';
+	import { useDisplay } from 'vuetify';
 
-import { config } from './config';
+	import { config } from './config';
 
-import { NavigationItem } from './types';
-import { Next, Refs } from '../types';
-import { ThemeEnum, THEME_ENUM_VALUES } from '../../constants/enums/ThemeEnum';
-import { propValidator } from '../../helpers/propValidator';
+	import { NavigationItem } from './types';
+	import { Next, Refs } from '../types';
+	import { ThemeEnum, THEME_ENUM_VALUES } from '../../constants/enums/ThemeEnum';
+	import { propValidator } from '../../helpers/propValidator';
 
-const props = defineProps({
-	theme: {
-		type: String as PropType<ThemeEnum>,
-		default: ThemeEnum.DEFAULT,
-		validator: (value: string) => propValidator('theme', THEME_ENUM_VALUES, value)
-	},
-	serviceTitle: {
-		type: String,
-		default: undefined
-	},
-	serviceSubTitle: {
-		type: String,
-		default: undefined
-	},
-	navigationItems: {
-		type: Array as PropType<NavigationItem[]>,
-		default: undefined
-	},
-	innerWidth: {
-		type: String,
-		default: '100%'
-	},
-	homeLink: {
-		type: [String, Boolean, Object] as PropType<Next>,
-		default: undefined
-	},
-	homeHref: {
-		type: String,
-		default: undefined
-	},
-	showNavBarMenuBtn: {
-		type: Boolean,
-		default: false
-	},
-	mobileVersion: {
-		type: Boolean,
-		default: false
-	},
-	sticky: {
-		type: Boolean,
-		default: false
-	},
-	target: {
-		type: String,
-		default: undefined
-	}
-});
+	const props = defineProps({
+		theme: {
+			type: String as PropType<ThemeEnum>,
+			default: ThemeEnum.DEFAULT,
+			validator: (value: string) => propValidator('theme', THEME_ENUM_VALUES, value)
+		},
+		serviceTitle: {
+			type: String,
+			default: undefined
+		},
+		serviceSubTitle: {
+			type: String,
+			default: undefined
+		},
+		navigationItems: {
+			type: Array as PropType<NavigationItem[]>,
+			default: undefined
+		},
+		innerWidth: {
+			type: String,
+			default: '100%'
+		},
+		homeLink: {
+			type: [String, Boolean, Object] as PropType<Next>,
+			default: undefined
+		},
+		homeHref: {
+			type: String,
+			default: undefined
+		},
+		showNavBarMenuBtn: {
+			type: Boolean,
+			default: false
+		},
+		mobileVersion: {
+			type: Boolean,
+			default: false
+		},
+		sticky: {
+			type: Boolean,
+			default: false
+		},
+		target: {
+			type: String,
+			default: undefined
+		}
+	});
 
-const { smAndDown } = useDisplay();
+	const { smAndDown } = useDisplay();
 
-const drawer = reactive({
-	value: false
-});
-const tab = reactive({
-	value: null
-});
-const scrolled = reactive({
-	value: false
-});
+	const drawer = reactive({
+		value: false
+	});
+	const tab = reactive({
+		value: null
+	});
+	const scrolled = reactive({
+		value: false
+	});
 
-const isMobileVersion = computed(() => {
-	if (props.mobileVersion) {
-		return true;
-	}
+	const isMobileVersion = computed(() => {
+		if (props.mobileVersion) {
+			return true;
+		}
 
-	return smAndDown;
-});
+		return smAndDown;
+	});
 
-const targetSelector = computed(() => {
-	if (!props.target) {
-		return null;
-	}
+	const targetSelector = computed(() => {
+		if (!props.target) {
+			return null;
+		}
 
-	return `#${props.target}`;
-});
+		return `#${props.target}`;
+	});
 
-const spacingClass = computed(() => {
-	if (props.sticky && scrolled) {
-		return isMobileVersion ? 'px-4 py-1' : 'px-14 py-1';
-	}
+	const spacingClass = computed(() => {
+		if (props.sticky && scrolled) {
+			return isMobileVersion ? 'px-4 py-1' : 'px-14 py-1';
+		}
 
-	return isMobileVersion ? 'pa-4' : 'px-14 py-7';
-});
+		return isMobileVersion ? 'pa-4' : 'px-14 py-7';
+	});
 
-const contentSheetHeight = computed(() => {
-	if (scrolled) {
-		return isMobileVersion ? 52 : 72;
-	}
+	const contentSheetHeight = computed(() => {
+		if (scrolled) {
+			return isMobileVersion ? 52 : 72;
+		}
 
-	return isMobileVersion ? 72 : 120;
-});
+		return isMobileVersion ? 72 : 120;
+	});
 
-const height = computed(() => {
-	if (showNavigationBar) {
-		return contentSheetHeight + 48;
-	}
+	const height = computed(() => {
+		if (showNavigationBar) {
+			return contentSheetHeight + 48;
+		}
 
-	return contentSheetHeight;
-});
+		return contentSheetHeight;
+	});
 
-const hasNavigationItems = computed(() => {
-	return Boolean(props.navigationItems || slots['navigation-drawer']);
-});
+	const hasNavigationItems = computed(() => {
+		return Boolean(props.navigationItems || slots['navigation-drawer']);
+	});
 
-const showHeaderMenuBtn = computed(() => {
-	const hasNavigation = Boolean(props.navigationItems || slots['navigation-drawer']);
+	const showHeaderMenuBtn = computed(() => {
+		const hasNavigation = Boolean(props.navigationItems || slots['navigation-drawer']);
 
-	return !props.showNavBarMenuBtn && isMobileVersion && hasNavigation;
-});
+		return !props.showNavBarMenuBtn && isMobileVersion && hasNavigation;
+	});
 
-const showNavigationBar = computed(() => {
-	if (slots['navigation-bar-content']) {
-		return true;
-	}
+	const showNavigationBar = computed(() => {
+		if (slots['navigation-bar-content']) {
+			return true;
+		}
 
-	if (showHeaderMenuBtn) {
-		return false;
-	}
+		if (showHeaderMenuBtn) {
+			return false;
+		}
 
-	return hasNavigationItems;
-});
+		return hasNavigationItems;
+	});
 
-const showSpacer = computed(() => {
-	return Boolean(slots.default) || isMobileVersion;
-});
+	const showSpacer = computed(() => {
+		return Boolean(slots.default) || isMobileVersion;
+	});
 
-function updateDrawer(value: boolean): void {
-	drawer = value;
-}
-
-function onScroll(e: MouseEvent): void {
-	if (!sticky) {
-		return;
+	function updateDrawer(value: boolean): void {
+		drawer = value;
 	}
 
-	const target = e.currentTarget as HTMLElement | Window;
-	const header = $refs.appBar.$el;
-	const headerHeight = header?.clientHeight || 0;
-	const scrollPosition = target === window ? window.scrollY : (target as HTMLElement).scrollTop;
+	function onScroll(e: MouseEvent): void {
+		if (!sticky) {
+			return;
+		}
 
-	scrolled = sticky && scrollPosition > headerHeight;
-}
+		const target = e.currentTarget as HTMLElement | Window;
+		const header = $refs.appBar.$el;
+		const headerHeight = header?.clientHeight || 0;
+		const scrollPosition = target === window ? window.scrollY : (target as HTMLElement).scrollTop;
+
+		scrolled = sticky && scrollPosition > headerHeight;
+	}
 </script>
 
 <style lang="scss" scoped>
