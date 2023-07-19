@@ -43,7 +43,7 @@
 			return props.spacing;
 		}
 
-		const spacingMapping: IndexedObject<string> = {
+		let spacingMapping: IndexedObject<string> = {
 			xs: 'px-0',
 			sm: 'px-4',
 			md: 'px-8',
@@ -51,13 +51,13 @@
 			xl: 'px-8'
 		};
 
-		const spacing = spacingMapping[useDisplay().name.value];
+		let spacing = spacingMapping[useDisplay().name.value];
 
 		return `py-10 ${spacing}`;
 	});
 
 	const containerSize = computed(() => {
-		const sizeMapping: IndexedObject<number> = {
+		let sizeMapping: IndexedObject<number> = {
 			[SizeEnum.X_LARGE]: 1440,
 			[SizeEnum.LARGE]: 960,
 			[SizeEnum.MEDIUM]: 800,
