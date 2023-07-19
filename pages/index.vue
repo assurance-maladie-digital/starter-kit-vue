@@ -1,8 +1,16 @@
 <template>
 	<div>
-		<v-icon icon="mdi-home-outline" />
-		<v-btn variant="tonal"> Button </v-btn>
+		<PageContainer
+			color="blue"
+		>
+			Contenu de la page.
+		</PageContainer>
 
-		<ContentDoc />
+		<PageContainer
+			size="s"
+			color="red"
+		>
+			Contenu de la page.
+		</PageContainer>
 	</div>
 </template>
