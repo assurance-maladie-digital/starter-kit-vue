@@ -31,6 +31,8 @@ export default defineNuxtConfig({
 			importLabComponents: true,
 		},
 	},
+	
+	css: ['~/assets/styles/index.scss'],
 
 	imports: {
 		dirs: ['./stores'],
