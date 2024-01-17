@@ -2,7 +2,7 @@
   "name": "skzz_x",
   "version": "0.0.0",
   "scripts": {
-    "dev": "node --no-warnings ./node_modules/.bin/vite",
+    "dev": "node --no-warnings ./node_modules/vite/bin/vite.js",
     "build": "vue-tsc --noEmit && vite build",
     "preview": "vite preview"
   },
