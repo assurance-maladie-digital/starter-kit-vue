@@ -13,13 +13,18 @@
 		"postinstall": "nuxt prepare"
 	},
 	"devDependencies": {
-		"@invictus.codes/nuxt-vuetify": "^0.2.23",
-		"@nuxt/content": "^2.7.0",
+		"@nuxt/content": "^2.11.0",
 		"@nuxt/devtools": "latest",
 		"@pinia/nuxt": "^0.4.11",
-		"@types/node": "^18",
-		"dayjs-nuxt": "^1.1.2",
-		"nuxt": "^3.6.1",
-		"sass": "^1.63.6"
+		"@types/node": "^18.19.9",
+		"dayjs-nuxt": "^1.2.7",
+		"nuxt": "^3.9.3",
+		"sass": "^1.70.0",
+		"vite": "^5.0.12",
+		"vite-plugin-vuetify": "^2.0.1",
+		"vuetify": "^3.5.1"
+	},
+	"dependencies": {
+		"@mdi/font": "^7.4.47"
 	}
 }

@@ -1,51 +1,44 @@
-import { aliases, mdi } from 'vuetify/iconsets/mdi';
+import vuetify, { transformAssetUrls } from "vite-plugin-vuetify";
+import { aliases, mdi } from "vuetify/iconsets/mdi";
 
 export default defineNuxtConfig({
 	devtools: { enabled: true },
+	build: {
+		transpile: ["vuetify"],
+	},
 	modules: [
-		'@invictus.codes/nuxt-vuetify',
-		'@nuxt/content',
-		'dayjs-nuxt',
-		'@pinia/nuxt',
+		(_options, nuxt) => {
+			nuxt.hooks.hook("vite:extendConfig", (config) => {
+				// @ts-expect-error
+				config.plugins.push(vuetify({ autoImport: true }));
+			});
+		},
+		"@nuxt/content",
+		"dayjs-nuxt",
+		"@pinia/nuxt",
 	],
-	vuetify: {
-		/* vuetify options */
-		vuetifyOptions: {
-			icons: {
-				defaultSet: 'mdi',
-				aliases,
-				sets: {
-					mdi,
-				},
+	vite: {
+		vue: {
+			template: {
+				transformAssetUrls,
 			},
 		},
-
-		moduleOptions: {
-			/* nuxt-vuetify module options */
-			treeshaking: true,
-			useIconCDN: true,
-
-			/* vite-plugin-vuetify options */
-			styles: true,
-			autoImport: true,
-			importLabComponents: true,
-		},
 	},
-	
-	css: ['~/assets/styles/index.scss'],
+
+	css: ["~/assets/styles/index.scss"],
 
 	imports: {
-		dirs: ['./stores'],
+		dirs: ["./stores"],
 	},
 
 	dayjs: {
-		locales: ['en', 'fr'],
-		plugins: ['relativeTime', 'utc', 'timezone'],
-		defaultLocale: 'fr',
-		defaultTimezone: 'Europe/Paris',
+		locales: ["en", "fr"],
+		plugins: ["relativeTime", "utc", "timezone"],
+		defaultLocale: "fr",
+		defaultTimezone: "Europe/Paris",
 	},
 
 	pinia: {
-		autoImports: ['defineStore', 'acceptHMRUpdate'],
+		autoImports: ["defineStore", "acceptHMRUpdate"],
 	},
 });
