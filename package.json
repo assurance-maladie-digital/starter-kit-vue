@@ -23,8 +23,5 @@
 		"vite": "^5.0.12",
 		"vite-plugin-vuetify": "^2.0.1",
 		"vuetify": "^3.5.1"
-	},
-	"dependencies": {
-		"@mdi/font": "^7.4.47"
 	}
 }
