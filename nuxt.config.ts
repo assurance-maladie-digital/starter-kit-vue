@@ -16,6 +16,7 @@ export default defineNuxtConfig({
 		"@nuxt/content",
 		"dayjs-nuxt",
 		"@pinia/nuxt",
+		"@nuxt/test-utils/module"
 	],
 	vite: {
 		vue: {
