@@ -22,8 +22,3 @@ logs
 *.njsproj
 *.sln
 *.sw?
-
-# Local env files
-.env
-.env.*
-!.env.example
