@@ -1,13 +1,15 @@
 <script setup lang="ts">
-	const msg = 'Hello World!'
+const msg = "Hello World!";
 </script>
 
 <template>
-  <div>
-	<vAppBar>
-		{{ msg }}
-	</vAppBar>
-  </div>
+	<div>
+		<VApp>
+			<vAppBar>
+				{{ msg }}
+			</vAppBar>
+		</VApp>
+	</div>
 </template>
 
 <style lang="scss"></style>
