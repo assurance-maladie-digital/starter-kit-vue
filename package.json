@@ -7,10 +7,10 @@
 	},
 	"scripts": {
 		"build": "nuxi build --dotenv .env",
-		"dev": "nuxt dev",
-		"generate": "nuxt generate",
-		"preview": "nuxt preview",
-		"postinstall": "nuxt prepare"
+		"dev": "nuxi dev",
+		"generate": "nuxi generate",
+		"preview": "nuxi preview",
+		"postinstall": "nuxi prepare"
 	},
 	"devDependencies": {
 		"@invictus.codes/nuxt-vuetify": "^0.2.23",
