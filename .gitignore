@@ -5,6 +5,11 @@
 .cache
 dist
 
+# Local env files
+.env
+.env.*
+!.env.example
+
 # Node dependencies
 node_modules
 
