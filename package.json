@@ -6,7 +6,7 @@
 		"pnpm": ">=8.11.0"
 	},
 	"scripts": {
-		"build": "nuxi build --dotenv .env.production",
+		"build": "nuxi build --dotenv .env",
 		"dev": "nuxt dev",
 		"generate": "nuxt generate",
 		"preview": "nuxt preview",
