@@ -11,7 +11,9 @@
 		"generate": "nuxt generate",
 		"preview": "nuxt preview",
 		"postinstall": "nuxt prepare",
-		"test:unit": "vitest"
+		"test:unit": "vitest",
+		"test:e2e": "cypress run",
+		"cypress:open": "cypress open"
 	},
 	"devDependencies": {
 		"@nuxt/content": "^2.11.0",
@@ -22,6 +24,7 @@
 		"@types/node": "^18.19.9",
 		"@vitejs/plugin-vue": "^5.0.3",
 		"@vue/test-utils": "^2.4.3",
+		"cypress": "^12.17.4",
 		"dayjs-nuxt": "^1.2.7",
 		"happy-dom": "^13.3.1",
 		"nuxt": "^3.9.3",
