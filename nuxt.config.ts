@@ -1,5 +1,6 @@
 import vuetify, { transformAssetUrls } from "vite-plugin-vuetify";
 import { aliases, mdi } from "vuetify/iconsets/mdi";
+import Components from 'unplugin-vue-components/vite'
 
 export default defineNuxtConfig({
 	devtools: { enabled: true },
@@ -24,6 +25,8 @@ export default defineNuxtConfig({
 				transformAssetUrls,
 			},
 		},
+		// change the component dirs to match our project layout
+		plugins: [Components({ dts: true, dirs: ["./components"]})],
 	},
 
 	css: ["~/assets/styles/index.scss"],
