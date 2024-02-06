@@ -1,5 +1,4 @@
 import vuetify, { transformAssetUrls } from "vite-plugin-vuetify";
-import { aliases, mdi } from "vuetify/iconsets/mdi";
 import Components from 'unplugin-vue-components/vite'
 
 export default defineNuxtConfig({

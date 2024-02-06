@@ -6,6 +6,7 @@ import { colorTheme } from '@cnamts/design-tokens/src/colors';
 
 export default defineNuxtPlugin((app) => {
 	const vuetify = createVuetify({
+		ssr: true,
 		icons: {
 			defaultSet: 'mdi',
 			aliases: {
