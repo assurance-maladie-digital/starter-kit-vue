@@ -2,6 +2,7 @@
 import '@mdi/font/css/materialdesignicons.css';
 import { createVuetify } from 'vuetify';
 import { aliases, mdi } from 'vuetify/iconsets/mdi';
+import { colorTheme } from '@cnamts/design-tokens/src/colors';
 
 export default defineNuxtPlugin((app) => {
 	const vuetify = createVuetify({
@@ -13,6 +14,14 @@ export default defineNuxtPlugin((app) => {
 			},
 			sets: {
 				mdi,
+			},
+		},
+		theme: {
+			defaultTheme: 'light',
+			themes: {
+				light: {
+					colors: colorTheme,
+				},
 			},
 		},
 	})

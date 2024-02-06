@@ -5,6 +5,9 @@ settings:
   excludeLinksFromLockfile: false
 
 dependencies:
+  '@cnamts/design-tokens':
+    specifier: 2.12.0
+    version: 2.12.0
   '@mdi/font':
     specifier: ^7.4.47
     version: 7.4.47
@@ -692,6 +695,10 @@ packages:
     dependencies:
       mime: 3.0.0
     dev: true
+
+  /@cnamts/design-tokens@2.12.0:
+    resolution: {integrity: sha512-ea8LBxb4SfUdxwMzkqR+AwFdVoSuzwZUjPBEib/GXg3tEFctlvAZDoHpC8F8zan4SPtcaKK4rSfwwf89X31UZg==}
+    dev: false
 
   /@colors/colors@1.5.0:
     resolution: {integrity: sha512-ooWCrlZP11i8GImSjTHYHLkvFDP48nS4+204nGb1RiX/WXYHmJA2III9/e2DWVabCESdW7hBAEzHRqUn9OUVvQ==}
