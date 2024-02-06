@@ -36,6 +36,7 @@
 		"vuetify": "^3.5.1"
 	},
 	"dependencies": {
-		"@mdi/font": "^7.4.47"
+		"@mdi/font": "^7.4.47",
+		"@cnamts/design-tokens": "2.12.0"
 	}
 }
