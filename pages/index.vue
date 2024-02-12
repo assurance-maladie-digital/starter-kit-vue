@@ -1,9 +1,15 @@
 <template>
-	<div>
-		<hr class="mt-16">
-		<v-icon icon="mdi-home-outline" />
-		<v-btn variant="tonal" color="primary" class="ml-5"> Button </v-btn>
-		<ContentDoc />
-		<TestComponent />
-	</div>
+	<PageContainer>
+		Test
+	</PageContainer>
 </template>
+
+<script lang="ts">
+import {defineComponent} from "vue";
+import {PageContainer} from "bridge-david";
+export default defineComponent({
+	components: {
+		PageContainer
+	}
+});
+</script>
