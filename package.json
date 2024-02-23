@@ -16,7 +16,7 @@
 		"cypress:open": "cypress open"
 	},
 	"dependencies": {
-		"bridge-david": "0.0.9",
+		"bridge-david": "0.0.15",
 		"@mdi/font": "^7.4.47",
 		"@cnamts/design-tokens": "2.12.0"
 	},
@@ -36,7 +36,7 @@
 		"sass": "^1.70.0",
 		"unplugin-vue-components": "^0.26.0",
 		"vite": "^5.0.12",
-		"vite-plugin-vuetify": "^1.0.2",
+		"vite-plugin-vuetify": "1.0.2",
 		"vitest": "^1.2.1",
 		"vuetify": "3.3.16"
 	}

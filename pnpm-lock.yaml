@@ -12,8 +12,8 @@ dependencies:
     specifier: ^7.4.47
     version: 7.4.47
   bridge-david:
-    specifier: 0.0.9
-    version: 0.0.9(vue@3.4.15)(vuetify@3.3.16)
+    specifier: 0.0.15
+    version: 0.0.15(vue@3.4.15)(vuetify@3.3.16)
 
 devDependencies:
   '@nuxt/content':
@@ -62,7 +62,7 @@ devDependencies:
     specifier: ^5.0.12
     version: 5.0.12(@types/node@18.19.10)(sass@1.70.0)
   vite-plugin-vuetify:
-    specifier: ^1.0.2
+    specifier: 1.0.2
     version: 1.0.2(vite@5.0.12)(vue@3.4.15)(vuetify@3.3.16)
   vitest:
     specifier: ^1.2.1
@@ -3630,8 +3630,8 @@ packages:
     dependencies:
       fill-range: 7.0.1
 
-  /bridge-david@0.0.9(vue@3.4.15)(vuetify@3.3.16):
-    resolution: {integrity: sha512-XtsU/G8FFAAzxFYHrB3+LRAx85Jz1hh8sNTHGAzfdxLDlALKH6YyXqUsDxQ5cLtz0Qhim3KGXspWbuU4xPaOBg==}
+  /bridge-david@0.0.15(vue@3.4.15)(vuetify@3.3.16):
+    resolution: {integrity: sha512-pjdDTya6k7koB99NSIad8ZTBmywPSbapJ4ifYCERGjik9Ei6n18NrIahNYaS4ewPjwxwsnQZfRnQMqm6VlzPLA==}
     peerDependencies:
       vue: ^3.3.0
       vuetify: ^3.3.0
