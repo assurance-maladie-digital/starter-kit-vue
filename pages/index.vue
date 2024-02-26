@@ -12,7 +12,7 @@ export default defineComponent({
 	components: {
 		PageContainer,
 		ChipList,
-		FranceConnectBtn
+		FranceConnectBtn,
 	}
 });
 </script>

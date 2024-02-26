@@ -16,9 +16,9 @@
 		"cypress:open": "cypress open"
 	},
 	"dependencies": {
-		"bridge-david": "0.0.15",
+		"@cnamts/design-tokens": "2.12.0",
 		"@mdi/font": "^7.4.47",
-		"@cnamts/design-tokens": "2.12.0"
+		"bridge-david": "0.0.15"
 	},
 	"devDependencies": {
 		"@nuxt/content": "^2.11.0",
