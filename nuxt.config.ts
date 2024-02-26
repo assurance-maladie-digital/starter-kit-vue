@@ -28,7 +28,10 @@ export default defineNuxtConfig({
 		plugins: [Components({ dts: true, dirs: ["./components"]})],
 	},
 
-	css: ["~/assets/styles/index.scss"],
+	css: [
+		"bridge-david/style.css",
+		"~/assets/styles/index.scss"
+	],
 
 	imports: {
 		dirs: ["./stores"],
