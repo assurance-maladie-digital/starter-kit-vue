@@ -8,14 +8,14 @@ dependencies:
   '@cnamts/design-tokens':
     specifier: 2.12.0
     version: 2.12.0
-  '@mdi/font':
-    specifier: ^7.4.47
-    version: 7.4.47
   bridge-david:
     specifier: 0.0.15
     version: 0.0.15(vue@3.4.15)(vuetify@3.3.16)
 
 devDependencies:
+  '@mdi/js':
+    specifier: 7.2.96
+    version: 7.2.96
   '@nuxt/content':
     specifier: ^2.11.0
     version: 2.11.0(nuxt@3.10.0)(vue@3.4.15)
@@ -1457,9 +1457,9 @@ packages:
       - supports-color
     dev: true
 
-  /@mdi/font@7.4.47:
-    resolution: {integrity: sha512-43MtGpd585SNzHZPcYowu/84Vz2a2g31TvPMTm9uTiCSWzaheQySUcSyUH/46fPnuPQWof2yd0pGBtzee/IQWw==}
-    dev: false
+  /@mdi/js@7.2.96:
+    resolution: {integrity: sha512-paR9M9ZT7rKbh2boksNUynuSZMHhqRYnEZOm/KrZTjQ4/FzyhjLHuvw/8XYzP+E7fS4+/Ms/82EN1pl/OFsiIA==}
+    dev: true
 
   /@netlify/functions@2.5.1:
     resolution: {integrity: sha512-7//hmiFHXGusAzuzEuXvRT9ItaeRjRs5lRs6lYUkaAXO1jnTWYDB2XdqFq5X4yMRX+/A96nrQ2HwCE+Pd0YMwg==}
