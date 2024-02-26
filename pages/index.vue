@@ -1,9 +1,18 @@
 <template>
-	<div>
-		<hr class="mt-16">
-		<v-icon icon="mdi-home-outline" />
-		<v-btn variant="tonal" color="primary" class="ml-5"> Button </v-btn>
-		<ContentDoc />
-		<TestComponent />
-	</div>
+	<PageContainer>
+		<ChipList :items="[{text: 'toto', value: 'toto'}]" />
+		<FranceConnectBtn href="https://app.franceconnect.gouv.fr/" />
+	</PageContainer>
 </template>
+
+<script lang="ts">
+import {defineComponent} from "vue";
+import {PageContainer, ChipList, FranceConnectBtn} from "bridge-david";
+export default defineComponent({
+	components: {
+		PageContainer,
+		ChipList,
+		FranceConnectBtn,
+	}
+});
+</script>
