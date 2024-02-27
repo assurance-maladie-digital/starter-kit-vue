@@ -17,7 +17,7 @@
 	},
 	"dependencies": {
 		"@cnamts/design-tokens": "2.12.0",
-		"bridge-david": "0.0.15"
+		"bridge-david": "0.0.17"
 	},
 	"devDependencies": {
 		"@mdi/js": "7.2.96",
@@ -38,6 +38,6 @@
 		"vite": "^5.0.12",
 		"vite-plugin-vuetify": "1.0.2",
 		"vitest": "^1.2.1",
-		"vuetify": "3.3.16"
+		"vuetify": "^3.3.0"
 	}
 }
