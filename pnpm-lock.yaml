@@ -9,8 +9,8 @@ dependencies:
     specifier: 2.12.0
     version: 2.12.0
   bridge-david:
-    specifier: 0.0.17
-    version: 0.0.17(vue@3.4.20)(vuetify@3.5.6)
+    specifier: 0.0.18
+    version: 0.0.18(vue@3.4.20)(vuetify@3.5.6)
 
 devDependencies:
   '@mdi/js':
@@ -2755,8 +2755,8 @@ packages:
     dependencies:
       fill-range: 7.0.1
 
-  /bridge-david@0.0.17(vue@3.4.20)(vuetify@3.5.6):
-    resolution: {integrity: sha512-wsVnkDuiiDFNOKcFfNfrKFs8F+PoVXnYhIs2fehyNXZdsyt8d8Dq3ffIjXib4CFSZx7niJoTlWsOog6+0nMWSg==}
+  /bridge-david@0.0.18(vue@3.4.20)(vuetify@3.5.6):
+    resolution: {integrity: sha512-xEF1evcjpmazMdHEVduC4ZHBLdzKK1Hv/Uay3Zg7Oi3w5lsY+BkH40syreIpZhAHh4O3AzeriMBR8HZa4VfLMQ==}
     peerDependencies:
       vue: ^3.3.0
       vuetify: ^3.3.0
