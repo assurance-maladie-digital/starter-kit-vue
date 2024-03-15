@@ -4,12 +4,6 @@ const msg = "Hello World!";
 
 <template>
 	<div>
-		<VApp>
-			<vAppBar>
-				{{ msg }}
-			</vAppBar>
-		</VApp>
+		<h1>{{ msg }}</h1>
 	</div>
 </template>
-
-<style lang="scss"></style>
