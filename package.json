@@ -17,7 +17,7 @@
 	},
 	"dependencies": {
 		"@cnamts/design-tokens": "2.12.0",
-		"@cnamts/synapse-bridge": "1.1.7-alpha.0"
+		"@cnamts/synapse-bridge": "1.1.8-alpha.0"
 	},
 	"devDependencies": {
 		"@mdi/js": "7.2.96",
@@ -29,6 +29,7 @@
 		"@types/node": "^18.19.9",
 		"@vitejs/plugin-vue": "^5.0.3",
 		"@vue/test-utils": "^2.4.3",
+		"consola": "3.0.1",
 		"cypress": "^12.17.4",
 		"dayjs-nuxt": "^1.2.7",
 		"happy-dom": "^13.3.1",
