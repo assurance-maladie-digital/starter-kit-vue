@@ -11,7 +11,7 @@
 		"generate": "nuxi generate",
 		"preview": "nuxi preview",
 		"postinstall": "nuxi prepare",
-		"test:unit": "vitest",
+		"test:unit": "vitest run",
 		"test:e2e": "cypress run",
 		"cypress:open": "cypress open"
 	},
@@ -28,17 +28,19 @@
 		"@testing-library/vue": "^8.0.1",
 		"@types/node": "^18.19.9",
 		"@vitejs/plugin-vue": "^5.0.3",
+		"@vitest/coverage-v8": "^1.4.0",
 		"@vue/test-utils": "^2.4.3",
 		"consola": "3.0.1",
 		"cypress": "^12.17.4",
 		"dayjs-nuxt": "^1.2.7",
 		"happy-dom": "^13.3.1",
 		"nuxt": "^3.10.0",
+		"resize-observer-polyfill": "^1.5.1",
 		"sass": "^1.70.0",
 		"unplugin-vue-components": "^0.26.0",
 		"vite": "^5.0.12",
 		"vite-plugin-vuetify": "1.0.2",
 		"vitest": "^1.2.1",
-		"vuetify": "^3.3.0"
+		"vuetify": "^3.5.10"
 	}
 }
