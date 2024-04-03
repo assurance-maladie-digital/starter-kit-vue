@@ -1,16 +1,11 @@
-import { mount } from '@vue/test-utils'
-import { describe, expect, it } from 'vitest';
-import { vuetify } from "../../../tests/unit/setup";
-
+// @vitest-environment nuxt
 import TestComponent from '../TestComponent.vue';
+import { mountSuspended } from '@nuxt/test-utils/runtime'
+import { describe, it, expect } from 'vitest';
 
 describe('TestComponent', () => {
 	it('should render', async () => {
-		const wrapper = mount(TestComponent, {
-			global: {
-				plugins: [vuetify],
-			},
-		});
+		const wrapper = await mountSuspended(TestComponent);
 		expect(wrapper.html()).toMatchSnapshot();
 	});
 });
