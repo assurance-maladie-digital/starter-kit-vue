@@ -18,7 +18,8 @@
 	},
 	"dependencies": {
 		"@cnamts/design-tokens": "2.12.0",
-		"@cnamts/synapse-bridge": "1.1.8-alpha.0"
+		"@cnamts/synapse-bridge": "1.1.8-alpha.0",
+		"cross-env": "^7.0.3"
 	},
 	"devDependencies": {
 		"cross-env": "^7.0.3",
