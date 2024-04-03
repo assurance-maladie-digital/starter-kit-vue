@@ -10,9 +10,10 @@
 		"dev": "nuxi dev",
 		"generate": "nuxi generate",
 		"preview": "nuxi preview",
+		"preinstall": "cross-env CYPRESS_INSTALL_BINARY=0 ",
 		"postinstall": "nuxi prepare",
 		"test:unit": "vitest run",
-		"test:e2e": "cypress run",
+		"test:e2e": "CYPRESS_INSTALL_BINARY= pnpm install && cypress run",
 		"cypress:open": "cypress open"
 	},
 	"dependencies": {
@@ -20,6 +21,7 @@
 		"@cnamts/synapse-bridge": "1.1.8-alpha.0"
 	},
 	"devDependencies": {
+		"cross-env": "^7.0.3",
 		"@mdi/js": "7.2.96",
 		"@nuxt/content": "^2.11.0",
 		"@nuxt/devtools": "latest",
