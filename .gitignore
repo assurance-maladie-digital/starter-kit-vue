@@ -28,5 +28,8 @@ logs
 .env.*
 !.env.example
 
+# Coverage
+**/tests/**/coverage
+
 # Cypress
 cypress

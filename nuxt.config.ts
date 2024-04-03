@@ -5,12 +5,6 @@ export default defineNuxtConfig({
 	ssr: false,
 	devtools: { enabled: true },
 	modules: [
-		(_options, nuxt) => {
-			nuxt.hooks.hook("vite:extendConfig", (config) => {
-				// @ts-expect-error
-				config.plugins.push(vuetify({ autoImport: true }));
-			});
-		},
 		"@nuxt/content",
 		"dayjs-nuxt",
 		"@pinia/nuxt",
