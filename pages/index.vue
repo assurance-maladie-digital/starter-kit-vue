@@ -4,8 +4,8 @@
 		service-sub-title="Documentation du Design System"
 	/>
 	<PageContainer>
-		<h1 class="text-primary">Home</h1>
-		<TestComponent msg="Un titre"/>
+		<h1 class="text-primary">{{ $config.public.title }}</h1>
+		<TestComponent :msg="$config.public.message"/>
 	</PageContainer>
 	<FooterBar
 		hide-a11y-link
