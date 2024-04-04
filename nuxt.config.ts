@@ -11,10 +11,8 @@ export default defineNuxtConfig({
 	},
 	devtools: { enabled: true },
 	modules: [
-		"@nuxt/content",
 		"dayjs-nuxt",
 		"@pinia/nuxt",
-		"@nuxt/test-utils/module"
 	],
 	build: {
 		transpile: ["vuetify"],
