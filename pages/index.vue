@@ -5,7 +5,7 @@
 	/>
 	<PageContainer>
 		<h1 class="text-primary">{{ $config.public.title }}</h1>
-		<p>{{ $config.public.message }}</p>
+		<TestComponent :msg="$config.public.message"/>
 	</PageContainer>
 	<FooterBar
 		hide-a11y-link
