@@ -136,6 +136,13 @@
 					page-title="Erreur serveur"
 				/>
 			</div>
+			<div class="mt-4 my-4 bg-grey-lighten-1">
+				<h2>PasswordField</h2>
+				<PasswordField
+					v-model="password"
+					@update:model-value="getValue($event)"
+				/>
+			</div>
 		</div>
 	</PageContainer>
 	<FooterBar
@@ -173,7 +180,8 @@ import {
 	ChipList,
 	ErrorPage,
 	MaintenancePage,
-	NotFoundPage
+	NotFoundPage,
+	PasswordField
 } from "@cnamts/synapse-bridge";
 
 export default defineComponent({
@@ -199,7 +207,8 @@ export default defineComponent({
 		ChipList,
 		ErrorPage,
 		MaintenancePage,
-		NotFoundPage
+		NotFoundPage,
+		PasswordField
 	},
 	data() {
 		return {
@@ -283,10 +292,15 @@ export default defineComponent({
 							icon: 'editIcon'
 						}
 					]
-				}
-			]
+				},
+			],
+			password: null as string | null
 		}
-
+	},
+	methods: {
+		getValue(value: string): void {
+			console.log(value);
+		}
 	}
 });
 </script>
