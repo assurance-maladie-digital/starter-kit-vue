@@ -143,6 +143,15 @@
 					@update:model-value="getValue($event)"
 				/>
 			</div>
+			<div class="mt-4 my-4">
+				<h2>PaginatedTable (données en dur)</h2>
+				<PaginatedTable
+					:headers="headers"
+					:items="peoples"
+					:items-per-page="5"
+					v-model:options="options"
+				/>
+			</div>
 		</div>
 	</PageContainer>
 	<FooterBar
@@ -181,7 +190,8 @@ import {
 	ErrorPage,
 	MaintenancePage,
 	NotFoundPage,
-	PasswordField
+	PasswordField,
+	PaginatedTable
 } from "@cnamts/synapse-bridge";
 
 export default defineComponent({
@@ -208,7 +218,8 @@ export default defineComponent({
 		ErrorPage,
 		MaintenancePage,
 		NotFoundPage,
-		PasswordField
+		PasswordField,
+		PaginatedTable
 	},
 	data() {
 		return {
@@ -294,7 +305,75 @@ export default defineComponent({
 					]
 				},
 			],
-			password: null as string | null
+			password: null as string | null,
+			options: {},
+			headers: [
+				{
+					title: 'Nom',
+					key: 'lastname'
+				},
+				{
+					title: 'Prénom',
+					key: 'firstname'
+				},
+				{
+					title: 'Email',
+					key: 'email'
+				}
+			],
+
+			peoples: [
+				{
+					firstname: 'Virginie',
+					lastname: 'Beauchesne',
+					email: 'virginie.beauchesne@example.com'
+				},
+				{
+					firstname: 'Simone',
+					lastname: 'Bellefeuille',
+					email: 'simone.bellefeuille@example.com'
+				},
+				{
+					firstname: 'Étienne',
+					lastname: 'Salois',
+					email: 'etienne.salois@example.com'
+				},
+				{
+					firstname: 'Bernadette',
+					lastname: 'Langelier',
+					email: 'bernadette.langelier@example.com'
+				},
+				{
+					firstname: 'Agate',
+					lastname: 'Roy',
+					email: 'agate.roy@example.com'
+				},
+				{
+					firstname: 'Louis',
+					lastname: 'Denis',
+					email: 'louis.denis@example.com'
+				},
+				{
+					firstname: 'Édith',
+					lastname: 'Cartier',
+					email: 'edith.cartier@example.com'
+				},
+				{
+					firstname: 'Alphonse',
+					lastname: 'Bouvier',
+					email: 'alphonse.bouvier@example.com'
+				},
+				{
+					firstname: 'Eustache',
+					lastname: 'Dubois',
+					email: 'eustache.dubois@example.com'
+				},
+				{
+					firstname: 'Rosemarie',
+					lastname: 'Quessy',
+					email: 'rosemarie.quessy@example.com'
+				}
+			]
 		}
 	},
 	methods: {
