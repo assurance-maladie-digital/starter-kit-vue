@@ -15,6 +15,9 @@ export default defineNuxtConfig({
 		"dayjs-nuxt",
 		"@pinia/nuxt",
 	],
+	plugins: [
+		'~/plugins/axios.ts',
+	],
 	build: {
 		transpile: ["vuetify"],
 	},
