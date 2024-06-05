@@ -23,5 +23,10 @@ export default defineNuxtPlugin(async (nuxtApp) => {
 			},
 		},
 	})
+
+	if (theme === 'bootstrap') {
+		document.body.classList.add('bootstrap');
+	}
+
 	nuxtApp.vueApp.use(vuetify);
 })
