@@ -5,6 +5,7 @@
 	/>
 	<PageContainer>
 		<h1 class="text-primary">{{ $config.public.title }}</h1>
+		<h2>Test font color scss</h2>
 		<TestComponent :msg="$config.public.message"/>
 		<VBtn color="primary">
 			Primary
@@ -79,10 +80,12 @@ export default defineComponent({
 </script>
 
 <style lang="scss" scoped>
-@import '@cnamts/design-tokens/dist/tokens';
+@import '@cnamts/design-tokens/dist/bootstrap-tokens';
 
 // custom styles
-
+h2 {
+	color: $vd-am-blue-lighten-60 !important;
+}
 .warning {
 	color: black !important;
 }
