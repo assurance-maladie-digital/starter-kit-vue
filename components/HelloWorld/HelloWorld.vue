@@ -4,6 +4,6 @@ const msg = "Hello World!";
 
 <template>
 	<div>
-		<h1>{{ msg }}</h1>
+		<h1 class="text-primary">{{ msg }}</h1>
 	</div>
 </template>

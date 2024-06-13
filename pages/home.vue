@@ -34,7 +34,7 @@
 					Exemple de composant DS
 				</v-card-title>
 				<v-card-item>
-					<BackBtn to="/"/>
+					<BackBtn to="/home" />
 					<br /><br />
 					<a href="https://digital-design-system.netlify.app/demarrer/introduction/" target="_blank">
 						Voir la documentation des composants du Design System.
