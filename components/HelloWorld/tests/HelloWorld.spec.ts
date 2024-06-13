@@ -1,11 +1,11 @@
 // @vitest-environment nuxt
-import TestComponent from '../TestComponent.vue';
+import HelloWorld from '../HelloWorld.vue';
 import { mountSuspended } from '@nuxt/test-utils/runtime'
 import { describe, it, expect } from 'vitest';
 
-describe('TestComponent', () => {
+describe('HelloWorld', () => {
 	it('should render', async () => {
-		const wrapper = await mountSuspended(TestComponent);
+		const wrapper = await mountSuspended(HelloWorld);
 		expect(wrapper.html()).toMatchSnapshot();
 	});
 });

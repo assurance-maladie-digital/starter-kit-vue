@@ -1,0 +1,15 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`home page should render > should render 1`] = `
+"<h1 data-v-cf17212c="" class="text-primary">Tokens</h1>
+<h1 data-v-cf17212c="" class="py-8">Heading:</h1>
+<div data-v-cf17212c="" style="background-color: #e0e7f2;" class="text-center">
+  <h1 class="my-1" data-v-cf17212c="">h1. Design system heading</h1>
+  <h2 class="my-1" data-v-cf17212c="">h2. Design system heading</h2>
+  <h3 class="my-1" data-v-cf17212c="">h3. Design system heading</h3>
+  <h4 class="my-1" data-v-cf17212c="">h4. Design system heading</h4>
+  <h5 class="my-1" data-v-cf17212c="">h5. Design system heading</h5>
+  <h6 class="my-1" data-v-cf17212c="">h6. Design system heading</h6>
+</div>
+<h1 data-v-cf17212c="" class="py-8">Couleurs du theme Vuetify:</h1>"
+`;
