@@ -1,6 +1,6 @@
 // @vitest-environment nuxt
 import Tokens from '../tokens.vue';
-import { mountSuspended } from '@nuxt/test-utils/runtime'
+import { mountSuspended } from '@nuxt/test-utils/runtime';
 import { describe, it, expect } from 'vitest';
 import { vuetify } from '@/tests/unit/setup';
 

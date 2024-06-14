@@ -1,7 +1,7 @@
 <template>
 	<h1 class="text-primary">{{ $config && $config.public ? $config.public.title : 'Accueil' }}</h1>
 	<h2>Test font color scss</h2>
-	<TestComponent :msg="$config && $config.public ? $config.public.message : 'Bonjour'"/>
+	<HelloWorld :msg="$config && $config.public ? $config.public.message : 'Bonjour'"/>
 	<VBtn color="primary">
 		Primary
 	</VBtn>

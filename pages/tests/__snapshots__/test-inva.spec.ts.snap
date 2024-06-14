@@ -3,7 +3,9 @@
 exports[`home page should render > should render 1`] = `
 "<h1 data-v-d90f6bfe="" class="text-primary">Accueil</h1>
 <h2 data-v-d90f6bfe="">Test font color scss</h2>
-<testcomponent data-v-d90f6bfe="" msg="Bonjour"></testcomponent>
+<div data-v-d90f6bfe="" msg="Bonjour">
+  <h1 class="text-primary">Hello World!</h1>
+</div>
 <button data-v-d90f6bfe="" type="button" class="v-btn v-btn--elevated v-theme--light bg-primary v-btn--density-default v-btn--size-default v-btn--variant-elevated"><span class="v-btn__overlay"></span><span class="v-btn__underlay"></span>
   <!----><span class="v-btn__content" data-no-activator=""> Primary </span>
   <!---->
