@@ -1,6 +1,6 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`home page should render > should render 1`] = `
+exports[`not found page should render > should render 1`] = `
 "<div data-v-d179c952="" data-v-d54e181e="" data-v-b33dad4a="" class="py-10 px-8 vd-page-container d-flex justify-center mb-6">
   <div data-v-d179c952="" class="v-sheet v-theme--light bg-transparent" style="width: 800px;">
     <div data-v-d54e181e="" class="v-card v-theme--light v-card--density-default elevation-2 v-card--variant-elevated pa-6 pa-sm-16">

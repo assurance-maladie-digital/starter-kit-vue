@@ -1,6 +1,6 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`home page should render > should render 1`] = `
+exports[`test inva page should render > should render 1`] = `
 "<h1 data-v-d90f6bfe="" class="text-primary">Accueil</h1>
 <h2 data-v-d90f6bfe="">Test font color scss</h2>
 <div data-v-d90f6bfe="" msg="Bonjour">

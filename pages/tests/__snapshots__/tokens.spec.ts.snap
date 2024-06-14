@@ -1,6 +1,6 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`home page should render > should render 1`] = `
+exports[`tokens page should render > should render 1`] = `
 "<h1 data-v-cf17212c="" class="text-primary">Tokens</h1>
 <h2 data-v-cf17212c="" class="py-8">Heading</h2>
 <div data-v-cf17212c="" style="background-color: #e0e7f2;" class="text-center">
