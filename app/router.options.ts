@@ -28,5 +28,10 @@ export default <RouterConfig> {
 			path: '/not-found',
 			component: () => import('~/pages/not-found.vue').then(r => r.default || r)
 		},
+		{
+			name: 'test-inva',
+			path: '/test-inva',
+			component: () => import('~/pages/test-inva.vue').then(r => r.default || r)
+		},
 	],
 }

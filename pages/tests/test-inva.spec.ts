@@ -14,5 +14,8 @@ describe('home page should render', () => {
 			},
 		});
 		expect(wrapper.html()).toMatchSnapshot();
+
+		const h1Text = wrapper.find('h1').text();
+		expect(h1Text).toContain('Accueil');
 	});
 });

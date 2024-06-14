@@ -14,5 +14,8 @@ describe('home page should render', () => {
 			},
 		});
 		expect(wrapper.html()).toMatchSnapshot();
+
+		const h2Text = wrapper.find('h2').text();
+		expect(h2Text).toContain('Maintenance en cours');
 	});
 });
