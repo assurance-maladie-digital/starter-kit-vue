@@ -12,12 +12,9 @@ export default defineNuxtConfig({
 	},
 	devtools: { enabled: true },
 	modules: [
-		'@nuxtjs/i18n',
+		"@nuxtjs/i18n",
 		"dayjs-nuxt",
 		"@pinia/nuxt",
-	],
-	plugins: [
-		'~/plugins/axios.ts',
 	],
 	build: {
 		transpile: ["vuetify"],

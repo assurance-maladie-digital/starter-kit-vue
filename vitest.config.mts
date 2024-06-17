@@ -7,7 +7,10 @@ export default defineVitestConfig({
 			enabled: true,
 			provider: 'v8',
 			reportsDirectory: './tests/unit/coverage',
-			include: ['**/components/**']
+			include: [
+				'**/components/**',
+				'**/pages/**',
+			]
 		},
 		server: {
 			deps: {
