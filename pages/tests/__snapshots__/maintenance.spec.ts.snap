@@ -1,9 +1,9 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
 exports[`maintenance page should render > should render 1`] = `
-"<div data-v-d179c952="" data-v-d54e181e="" data-v-5bf25f2b="" class="py-10 px-8 vd-page-container d-flex justify-center">
+"<div data-v-d179c952="" data-v-d54e181e="" data-v-5bf25f2b="" class="py-10 px-0 vd-page-container d-flex justify-center">
   <div data-v-d179c952="" class="v-sheet v-theme--light bg-transparent" style="width: 800px;">
-    <div data-v-d54e181e="" class="v-card v-theme--light v-card--density-default elevation-2 v-card--variant-elevated pa-6 pa-sm-16">
+    <div data-v-d54e181e="" class="v-card v-theme--light v-card--density-default elevation-0 v-card--variant-elevated pa-6 pa-sm-16">
       <!---->
       <div class="v-card__loader">
         <div class="v-progress-linear v-theme--light v-locale--is-ltr" style="top: 0px; height: 0px; --v-progress-linear-height: 2px; left: 50%; transform: translateX(-50%);" role="progressbar" aria-hidden="true" aria-valuemin="0" aria-valuemax="100">
