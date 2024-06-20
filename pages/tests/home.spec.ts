@@ -3,6 +3,7 @@ import Home from '../home.vue';
 import { mountSuspended } from '@nuxt/test-utils/runtime';
 import { describe, it, expect } from 'vitest';
 import { vuetify } from '@/tests/unit/setup';
+import Tokens from "~/pages/tokens.vue";
 
 describe('home page should render', () => {
 	it('should render', async () => {
