@@ -2,7 +2,7 @@ import {colorTheme} from "@cnamts/design-tokens/src/colors";
 import Components from "unplugin-vue-components/vite";
 
 export default defineNuxtConfig({
-	ssr: false,
+	ssr: true,
 	runtimeConfig: {
 		public: {
 			title: process.env.TITLE,
