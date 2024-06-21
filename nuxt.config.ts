@@ -1,4 +1,4 @@
-import vuetify, { transformAssetUrls } from "vite-plugin-vuetify";
+import {colorTheme} from "@cnamts/design-tokens/src/colors";
 import Components from "unplugin-vue-components/vite";
 
 export default defineNuxtConfig({
@@ -12,22 +12,32 @@ export default defineNuxtConfig({
 	},
 	devtools: { enabled: true },
 	modules: [
+		"vuetify-nuxt-module",
 		"@nuxtjs/i18n",
 		"dayjs-nuxt",
 		"@pinia/nuxt",
 	],
-	build: {
-		transpile: ["vuetify"],
-	},
-	vite: {
-		vue: {
-			template: {
-				transformAssetUrls,
+	vuetify: {
+		vuetifyOptions: {
+			icons: {
+				defaultSet: 'mdi-svg',
+			},
+			theme: {
+				defaultTheme: 'light',
+				themes: {
+					light: {
+						colors: colorTheme,
+					},
+				},
 			},
 		},
+	},
+	build: {
+		transpile: ["vuetify", "@cnamts/synapse-bridge", "@cnamts/design-tokens"],
+	},
+	vite: {
 		// change the component dirs to match our project layout
 		plugins: [
-			vuetify(),
 			Components({ dts: true, dirs: ["./components"]})
 		],
 	},
