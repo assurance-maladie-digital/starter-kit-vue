@@ -1,4 +1,4 @@
-import { shallowMount } from '@vue/test-utils';
+import { shallowMount, mount } from '@vue/test-utils';
 import Tokens from '@/pages/tokens.vue';
 import { describe, it, expect, beforeEach } from 'vitest';
 import { vuetify } from '@/tests/unit/setup';
@@ -8,7 +8,7 @@ describe('Tokens.vue', () => {
 	let wrapper : any;
 
 	beforeEach(async () => {
-		wrapper = shallowMount(Tokens, {
+		wrapper = mount(Tokens, {
 			global: {
 				plugins: [
 					vuetify,
@@ -49,5 +49,9 @@ describe('Tokens.vue', () => {
 
 	it('returns false for medium color', () => {
 		expect(wrapper.vm.isDarkColor('#808080')).toBe(false);
+	});
+
+	it('renders color boxes correctly', async () => {
+
 	});
 });
