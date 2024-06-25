@@ -50,4 +50,38 @@ describe('home page should render', () => {
 
 		expect(mockRouter.push).toHaveBeenCalled();
 	});
+
+	it('renders title from $config', async () => {
+		const mockConfig = {
+			public: {
+				title: 'Test Title'
+			}
+		};
+
+		const wrapper = mount(Home, {
+			global: {
+				plugins: [vuetify],
+				mocks: {
+					$config: mockConfig
+				}
+			}
+		});
+
+		const h1Text = wrapper.find('h1').text();
+		expect(h1Text).toContain('Test Title');
+	});
+
+	it('renders default title when $config is not available', async () => {
+		const wrapper = mount(Home, {
+			global: {
+				plugins: [vuetify],
+				mocks: {
+					$config: null
+				}
+			}
+		});
+
+		const h1Text = wrapper.find('h1').text();
+		expect(h1Text).toContain('Accueil');
+	});
 });
