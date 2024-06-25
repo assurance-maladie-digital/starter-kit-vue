@@ -5,7 +5,7 @@
 
 ## Prérequis
 
-SSR desactive.
+SSR désactivé.
 
 Pour utiliser ce starter kit, vous devez avoir au moins les versions suivantes de Node et PNPM :
 
