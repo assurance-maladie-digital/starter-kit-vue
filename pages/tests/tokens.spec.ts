@@ -7,7 +7,7 @@ import { vuetify } from '@/tests/unit/setup';
 describe('Tokens.vue', () => {
 	let wrapper : any;
 
-	beforeEach(() => {
+	beforeEach(async () => {
 		wrapper = shallowMount(Tokens, {
 			global: {
 				plugins: [
@@ -15,6 +15,7 @@ describe('Tokens.vue', () => {
 				],
 			},
 		});
+		await wrapper.vm.$nextTick();
 	});
 
 	it('groups colors by their base color', () => {
