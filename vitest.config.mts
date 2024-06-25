@@ -5,7 +5,7 @@ export default defineVitestConfig({
 		environment: 'nuxt',
 		coverage: {
 			enabled: true,
-			provider: 'v8',
+			provider: 'istanbul',
 			reportsDirectory: './tests/unit/coverage',
 			include: [
 				'**/components/**',
