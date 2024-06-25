@@ -10,6 +10,7 @@ export default defineVitestConfig({
 			include: [
 				'**/components/**',
 				'**/pages/**',
+				'**/store/**',
 			]
 		},
 		server: {
