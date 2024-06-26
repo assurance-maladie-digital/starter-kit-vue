@@ -13,6 +13,29 @@ describe('Tokens.vue', () => {
 				plugins: [
 					vuetify,
 				],
+				mocks: {
+					$vuetify: {
+						theme: {
+							themes: {
+								light: {
+									colors: {
+										'blue-light': '#3A8DFF',
+										'blue-dark': '#00509D',
+										'red-light': '#FF6B6B',
+										'red-dark': '#D00000'
+									}
+								}
+							}
+						}
+					},
+					$nuxt: {
+						$config: {
+							public: {
+								theme: {}
+							}
+						}
+					}
+				}
 			},
 		});
 		await wrapper.vm.$nextTick();
@@ -49,9 +72,5 @@ describe('Tokens.vue', () => {
 
 	it('returns false for medium color', () => {
 		expect(wrapper.vm.isDarkColor('#808080')).toBe(false);
-	});
-
-	it('renders color boxes correctly', async () => {
-
 	});
 });
