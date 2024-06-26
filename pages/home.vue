@@ -50,11 +50,19 @@
 				<v-card-title>
 					Test du store
 				</v-card-title>
-				<v-card-item>
+				<!--<v-card-item>
 					<div v-if="showNotificationBar1">Notification: {{ notificationStore.notificationPayload }}</div>
 					<div class="d-flex flex-wrap align-center justify-center ma-n2">
 						<v-btn @click="createNotification" class="ma-2">Créer une notification</v-btn>
 						<v-btn @click="removeNotification" class="ma-2">Supprimer une notification</v-btn>
+					</div>
+				</v-card-item>-->
+				<v-card-item>
+					<div>Compteur: {{ counterStore.count }}</div>
+					<div class="d-flex flex-wrap align-center justify-center ma-n2">
+						<v-btn class="primary ma-2" @click="counterStore.increment">Incrémenter</v-btn>
+						<v-btn class="primary ma-2" @click="counterStore.decrement">Décrémenter</v-btn>
+						<v-btn class="primary ma-2" @click="counterStore.reset">Réinitialiser</v-btn>
 					</div>
 				</v-card-item>
 			</v-card>
@@ -65,7 +73,8 @@
 <script lang="ts">
 import {defineComponent} from "vue";
 import { BackBtn, NotificationBar } from "@cnamts/synapse-bridge";
-import { useMainStore, useNotificationStore } from "@/store";
+import { useCounterStore } from "~/stores/counter";
+import { useNotificationStore } from "~/stores/notifications";
 
 export default defineComponent({
 	components: {
@@ -74,17 +83,10 @@ export default defineComponent({
 	},
 	data() {
 		return {
-			showNotificationBar1: true
+			showNotificationBar1: true,
+			counterStore: useCounterStore(),
+			notificationStore: useNotificationStore()
 		}
-	},
-	setup() {
-		const mainStore = useMainStore();
-		const notificationStore = useNotificationStore();
-
-		return {
-			mainStore,
-			notificationStore,
-		};
 	},
 	methods: {
 		createNotification() {
