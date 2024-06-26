@@ -46,7 +46,7 @@ export default defineNuxtConfig({
 		"~/assets/styles/index.scss"
 	],
 	imports: {
-		dirs: ["./store"],
+		dirs: ["./stores"],
 	},
 	dayjs: {
 		locales: ["en", "fr"],

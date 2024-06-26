@@ -48,21 +48,21 @@
 				class="mx-auto"
 			>
 				<v-card-title>
-					Test du store
+					Test des stores
 				</v-card-title>
-				<!--<v-card-item>
-					<div v-if="showNotificationBar1">Notification: {{ notificationStore.notificationPayload }}</div>
-					<div class="d-flex flex-wrap align-center justify-center ma-n2">
+				<v-card-item>
+					<div>Compteur: {{ counterStore?.count }}</div>
+					<div class="d-flex flex-wrap align-center justify-center">
+						<v-btn @click="counterStore?.increment" class="ma-2">Incrémenter</v-btn>
+						<v-btn @click="counterStore?.decrement" class="ma-2">Décrémenter</v-btn>
+						<v-btn @click="counterStore?.reset" class="ma-2">Réinitialiser</v-btn>
+					</div>
+				</v-card-item>
+				<v-card-item>
+					<div>Notification: {{ notificationStore?.notificationPayload }}</div>
+					<div class="d-flex flex-wrap align-center justify-center">
 						<v-btn @click="createNotification" class="ma-2">Créer une notification</v-btn>
 						<v-btn @click="removeNotification" class="ma-2">Supprimer une notification</v-btn>
-					</div>
-				</v-card-item>-->
-				<v-card-item>
-					<div>Compteur: {{ counterStore.count }}</div>
-					<div class="d-flex flex-wrap align-center justify-center ma-n2">
-						<v-btn class="primary ma-2" @click="counterStore.increment">Incrémenter</v-btn>
-						<v-btn class="primary ma-2" @click="counterStore.decrement">Décrémenter</v-btn>
-						<v-btn class="primary ma-2" @click="counterStore.reset">Réinitialiser</v-btn>
 					</div>
 				</v-card-item>
 			</v-card>
@@ -83,7 +83,6 @@ export default defineComponent({
 	},
 	data() {
 		return {
-			showNotificationBar1: true,
 			counterStore: useCounterStore(),
 			notificationStore: useNotificationStore()
 		}

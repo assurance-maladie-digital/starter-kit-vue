@@ -16,6 +16,4 @@ export const useNotificationStore = defineStore({
 			notificationActions.clearNotification({ commit: () => {} });
 		},
 	},
-	getters: {
-	},
 });

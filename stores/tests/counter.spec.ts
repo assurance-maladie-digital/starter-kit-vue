@@ -7,10 +7,12 @@ describe('Counter Store', () => {
 
 	beforeEach(() => {
 		const pinia = createPinia();
-		store = useMainStore(pinia);
+		store = useCounterStore(pinia);
 	});
 
 	it('should have an initial state of empty object', () => {
-		expect(store.$state).toEqual({});
+		expect(store.$state).toEqual({
+			count: 0,
+		});
 	});
 });
