@@ -13,14 +13,15 @@ export const useMainStore = defineStore({
 export const useNotificationStore = defineStore({
 	id: 'notification',
 	state: () => ({
+		notificationPayload: null,
 	}),
 	actions: {
 		create(payload: any) {
-			alert('Create notification')
+			this.notificationPayload = payload;
 			notificationActions.addNotification({ commit: () => {}, state: {} }, payload);
 		},
 		remove() {
-			alert('remove notification')
+			this.notificationPayload = null;
 			notificationActions.clearNotification({ commit: () => {} });
 		},
 	},

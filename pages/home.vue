@@ -51,6 +51,7 @@
 					Test du store
 				</v-card-title>
 				<v-card-item>
+					<div v-if="showNotificationBar1">Notification: {{ notificationStore.notificationPayload }}</div>
 					<div class="d-flex flex-wrap align-center justify-center ma-n2">
 						<v-btn @click="createNotification" class="ma-2">Créer une notification</v-btn>
 						<v-btn @click="removeNotification" class="ma-2">Supprimer une notification</v-btn>
@@ -87,10 +88,11 @@ export default defineComponent({
 	},
 	methods: {
 		createNotification() {
-			this.notificationStore.create({
+			const payload = {
 				message: 'Notification de test',
 				type: 'success'
-			});
+			};
+			this.notificationStore.create(payload);
 		},
 		removeNotification() {
 			this.notificationStore.remove();
