@@ -97,7 +97,7 @@ exports[`home page should render > should render 1`] = `
       <!----><span class="v-card__underlay"></span>
     </div>
   </div>
-  <div class="v-col">
+  <div class="v-col-md-4 v-col-12">
     <div class="v-card v-theme--light bg-grey-lighten-4 v-card--density-default v-card--variant-elevated mx-auto">
       <!---->
       <div class="v-card__loader">
@@ -123,15 +123,15 @@ exports[`home page should render > should render 1`] = `
           <!---->
           <!---->
           <div>Compteur: </div>
-          <div class="d-flex flex-wrap align-center justify-center"><button type="button" class="v-btn v-btn--elevated v-theme--light v-btn--density-default v-btn--size-default v-btn--variant-elevated ma-2"><span class="v-btn__overlay"></span><span class="v-btn__underlay"></span>
+          <div class="d-flex flex-wrap align-center justify-center"><button type="button" class="v-btn v-btn--elevated v-theme--light bg-primary v-btn--density-default v-btn--size-default v-btn--variant-elevated ma-2"><span class="v-btn__overlay"></span><span class="v-btn__underlay"></span>
               <!----><span class="v-btn__content" data-no-activator="">Incrémenter</span>
               <!---->
               <!---->
-            </button><button type="button" class="v-btn v-btn--elevated v-theme--light v-btn--density-default v-btn--size-default v-btn--variant-elevated ma-2"><span class="v-btn__overlay"></span><span class="v-btn__underlay"></span>
+            </button><button type="button" class="v-btn v-btn--elevated v-theme--light bg-primary v-btn--density-default v-btn--size-default v-btn--variant-elevated ma-2"><span class="v-btn__overlay"></span><span class="v-btn__underlay"></span>
               <!----><span class="v-btn__content" data-no-activator="">Décrémenter</span>
               <!---->
               <!---->
-            </button><button type="button" class="v-btn v-btn--elevated v-theme--light v-btn--density-default v-btn--size-default v-btn--variant-elevated ma-2"><span class="v-btn__overlay"></span><span class="v-btn__underlay"></span>
+            </button><button type="button" class="v-btn v-btn--elevated v-theme--light bg-primary v-btn--density-default v-btn--size-default v-btn--variant-elevated ma-2"><span class="v-btn__overlay"></span><span class="v-btn__underlay"></span>
               <!----><span class="v-btn__content" data-no-activator="">Réinitialiser</span>
               <!---->
               <!---->
@@ -145,11 +145,11 @@ exports[`home page should render > should render 1`] = `
           <!---->
           <!---->
           <div>Notification: </div>
-          <div class="d-flex flex-wrap align-center justify-center"><button type="button" class="v-btn v-btn--elevated v-theme--light v-btn--density-default v-btn--size-default v-btn--variant-elevated ma-2"><span class="v-btn__overlay"></span><span class="v-btn__underlay"></span>
+          <div class="d-flex flex-wrap align-center justify-center"><button type="button" class="v-btn v-btn--elevated v-theme--light bg-primary v-btn--density-default v-btn--size-default v-btn--variant-elevated ma-2"><span class="v-btn__overlay"></span><span class="v-btn__underlay"></span>
               <!----><span class="v-btn__content" data-no-activator="">Créer une notification</span>
               <!---->
               <!---->
-            </button><button type="button" class="v-btn v-btn--elevated v-theme--light v-btn--density-default v-btn--size-default v-btn--variant-elevated ma-2"><span class="v-btn__overlay"></span><span class="v-btn__underlay"></span>
+            </button><button type="button" class="v-btn v-btn--elevated v-theme--light bg-primary v-btn--density-default v-btn--size-default v-btn--variant-elevated ma-2"><span class="v-btn__overlay"></span><span class="v-btn__underlay"></span>
               <!----><span class="v-btn__content" data-no-activator="">Supprimer une notification</span>
               <!---->
               <!---->

@@ -75,14 +75,13 @@
 
 <script lang="ts">
 import {defineComponent} from "vue";
-import { BackBtn, NotificationBar } from "@cnamts/synapse-bridge";
+import { BackBtn } from "@cnamts/synapse-bridge";
 import { useCounterStore } from "~/stores/counter";
 import { useNotificationStore } from "~/stores/notifications";
 
 export default defineComponent({
 	components: {
-		BackBtn,
-		NotificationBar
+		BackBtn
 	},
 	data() {
 		return {
