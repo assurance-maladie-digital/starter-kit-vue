@@ -8,7 +8,7 @@
 	<v-row justify="center">
 		<v-col
 			cols="12"
-			md="6"
+			md="4"
 		>
 			<v-card
 				color="grey-lighten-4"
@@ -24,7 +24,7 @@
 		</v-col>
 		<v-col
 			cols="12"
-			md="6"
+			md="4"
 		>
 			<v-card
 				color="grey-lighten-4"
@@ -42,16 +42,62 @@
 				</v-card-item>
 			</v-card>
 		</v-col>
+		<v-col>
+			<v-card
+				color="grey-lighten-4"
+				class="mx-auto"
+			>
+				<v-card-title>
+					Test des stores
+				</v-card-title>
+				<v-card-item>
+					<div>Compteur: {{ counterStore?.count }}</div>
+					<div class="d-flex flex-wrap align-center justify-center">
+						<v-btn @click="counterStore?.increment" class="ma-2">Incrémenter</v-btn>
+						<v-btn @click="counterStore?.decrement" class="ma-2">Décrémenter</v-btn>
+						<v-btn @click="counterStore?.reset" class="ma-2">Réinitialiser</v-btn>
+					</div>
+				</v-card-item>
+				<v-card-item>
+					<div>Notification: {{ notificationStore?.notificationPayload }}</div>
+					<div class="d-flex flex-wrap align-center justify-center">
+						<v-btn @click="createNotification" class="ma-2">Créer une notification</v-btn>
+						<v-btn @click="removeNotification" class="ma-2">Supprimer une notification</v-btn>
+					</div>
+				</v-card-item>
+			</v-card>
+		</v-col>
 	</v-row>
 </template>
 
 <script lang="ts">
 import {defineComponent} from "vue";
-import { BackBtn } from "@cnamts/synapse-bridge";
+import { BackBtn, NotificationBar } from "@cnamts/synapse-bridge";
+import { useCounterStore } from "~/stores/counter";
+import { useNotificationStore } from "~/stores/notifications";
 
 export default defineComponent({
 	components: {
-		BackBtn
+		BackBtn,
+		NotificationBar
+	},
+	data() {
+		return {
+			counterStore: useCounterStore(),
+			notificationStore: useNotificationStore()
+		}
+	},
+	methods: {
+		createNotification() {
+			const payload = {
+				message: 'Notification de test',
+				type: 'success'
+			};
+			this.notificationStore.create(payload);
+		},
+		removeNotification() {
+			this.notificationStore.remove();
+		}
 	}
 });
 </script>
