@@ -8,7 +8,7 @@
 	<v-row justify="center">
 		<v-col
 			cols="12"
-			md="6"
+			md="4"
 		>
 			<v-card
 				color="grey-lighten-4"
@@ -24,7 +24,7 @@
 		</v-col>
 		<v-col
 			cols="12"
-			md="6"
+			md="4"
 		>
 			<v-card
 				color="grey-lighten-4"
@@ -42,16 +42,59 @@
 				</v-card-item>
 			</v-card>
 		</v-col>
+		<v-col>
+			<v-card
+				color="grey-lighten-4"
+				class="mx-auto"
+			>
+				<v-card-title>
+					Test du store
+				</v-card-title>
+				<v-card-item>
+					<div class="d-flex flex-wrap align-center justify-center ma-n2">
+						<v-btn @click="createNotification" class="ma-2">Créer une notification</v-btn>
+						<v-btn @click="removeNotification" class="ma-2">Supprimer une notification</v-btn>
+					</div>
+				</v-card-item>
+			</v-card>
+		</v-col>
 	</v-row>
 </template>
 
 <script lang="ts">
 import {defineComponent} from "vue";
-import { BackBtn } from "@cnamts/synapse-bridge";
+import { BackBtn, NotificationBar } from "@cnamts/synapse-bridge";
+import { useMainStore, useNotificationStore } from "@/store";
 
 export default defineComponent({
 	components: {
-		BackBtn
+		BackBtn,
+		NotificationBar
+	},
+	data() {
+		return {
+			showNotificationBar1: true
+		}
+	},
+	setup() {
+		const mainStore = useMainStore();
+		const notificationStore = useNotificationStore();
+
+		return {
+			mainStore,
+			notificationStore,
+		};
+	},
+	methods: {
+		createNotification() {
+			this.notificationStore.create({
+				message: 'Notification de test',
+				type: 'success'
+			});
+		},
+		removeNotification() {
+			this.notificationStore.remove();
+		}
 	}
 });
 </script>

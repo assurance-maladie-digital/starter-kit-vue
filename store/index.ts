@@ -1,5 +1,5 @@
 import { defineStore } from 'pinia';
-import { notification } from '@cnamts/synapse-bridge/modules/notification';
+import { actions as notificationActions } from '@cnamts/synapse-bridge/modules/notification';
 
 export const useMainStore = defineStore({
 	id: 'main',
@@ -15,6 +15,14 @@ export const useNotificationStore = defineStore({
 	state: () => ({
 	}),
 	actions: {
+		create(payload: any) {
+			alert('Create notification')
+			notificationActions.addNotification({ commit: () => {}, state: {} }, payload);
+		},
+		remove() {
+			alert('remove notification')
+			notificationActions.clearNotification({ commit: () => {} });
+		},
 	},
 	getters: {
 	},
