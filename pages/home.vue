@@ -42,7 +42,10 @@
 				</v-card-item>
 			</v-card>
 		</v-col>
-		<v-col>
+		<v-col
+			cols="12"
+			md="4"
+		>
 			<v-card
 				color="grey-lighten-4"
 				class="mx-auto"
