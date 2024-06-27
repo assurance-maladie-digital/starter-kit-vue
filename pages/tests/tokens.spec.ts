@@ -3,7 +3,7 @@ import Tokens from '@/pages/tokens.vue';
 import { describe, it, expect, beforeEach } from 'vitest';
 import { vuetify } from '@/tests/unit/setup';
 
-describe('Tokens.vue', () => {
+describe('tokens page should render', () => {
 	let wrapper : any;
 
 	beforeEach(async () => {
