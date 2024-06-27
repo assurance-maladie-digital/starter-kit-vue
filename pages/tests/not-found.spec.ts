@@ -1,4 +1,4 @@
-import { mount, shallowMount } from '@vue/test-utils';
+import { mount } from '@vue/test-utils';
 import NotFound from '../not-found.vue';
 import {describe, it, expect, vi, beforeEach} from 'vitest';
 import { vuetify } from '@/tests/unit/setup';
