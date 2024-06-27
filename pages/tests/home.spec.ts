@@ -1,17 +1,9 @@
 import { mount } from '@vue/test-utils';
 import Home from '../home.vue';
-import { describe, it, expect, vi } from 'vitest';
+import { describe, it, expect } from 'vitest';
 import { vuetify } from '@/tests/unit/setup';
 
 describe('home page should render', () => {
-	const mockRouter = {
-		push: vi.fn()
-	};
-
-	const mockRoute = {
-		path: '/some-path'
-	};
-
 	it('should render', async () => {
 		const wrapper = mount(Home,{
 			global: {
