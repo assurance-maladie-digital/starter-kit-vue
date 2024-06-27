@@ -1,8 +1,7 @@
-import { shallowMount, mount } from '@vue/test-utils';
+import { mount } from '@vue/test-utils';
 import Tokens from '@/pages/tokens.vue';
 import { describe, it, expect, beforeEach } from 'vitest';
 import { vuetify } from '@/tests/unit/setup';
-
 
 describe('Tokens.vue', () => {
 	let wrapper : any;

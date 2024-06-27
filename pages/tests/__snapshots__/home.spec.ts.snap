@@ -122,7 +122,7 @@ exports[`home page should render > should render 1`] = `
         <div class="v-card-item__content">
           <!---->
           <!---->
-          <div>Compteur: </div>
+          <div>Compteur: 0</div>
           <div class="d-flex flex-wrap align-center justify-center"><button type="button" class="v-btn v-btn--elevated v-theme--light bg-primary v-btn--density-default v-btn--size-default v-btn--variant-elevated ma-2"><span class="v-btn__overlay"></span><span class="v-btn__underlay"></span>
               <!----><span class="v-btn__content" data-no-activator="">Incrémenter</span>
               <!---->

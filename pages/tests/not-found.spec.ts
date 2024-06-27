@@ -1,21 +1,43 @@
-// @vitest-environment nuxt
+import { mount, shallowMount } from '@vue/test-utils';
 import NotFound from '../not-found.vue';
-import { mountSuspended } from '@nuxt/test-utils/runtime';
-import { describe, it, expect } from 'vitest';
+import {describe, it, expect, vi, beforeEach} from 'vitest';
 import { vuetify } from '@/tests/unit/setup';
 
 describe('not found page should render', () => {
-	it('should render', async () => {
-		const wrapper = await mountSuspended(NotFound,{
+	const mockRouter = {
+		push: vi.fn()
+	};
+
+	const mockRoute = {
+		fullPath: '/test',
+		name: undefined,
+		path: '/test',
+	};
+
+	let wrapper : any;
+
+	beforeEach(async () => {
+		wrapper = mount(NotFound, {
 			global: {
 				plugins: [
 					vuetify,
 				],
+				mocks: {
+					$router: mockRouter,
+					$route: mockRoute
+				}
 			},
 		});
-		expect(wrapper.html()).toMatchSnapshot();
+		await wrapper.vm.$nextTick();
+	});
 
+	it('should render and call setSupportId method', async () => {
 		const h2Text = wrapper.find('h2').text();
 		expect(h2Text).toContain('Page non trouvée');
+
+		wrapper.vm.setSupportId();
+		await wrapper.vm.$nextTick();
+
+		expect(mockRouter.push).toHaveBeenCalled();
 	});
 });

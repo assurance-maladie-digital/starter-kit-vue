@@ -1,12 +1,11 @@
-// @vitest-environment nuxt
+import { mount } from '@vue/test-utils';
 import Maintenance from '../maintenance.vue';
-import { mountSuspended } from '@nuxt/test-utils/runtime';
 import { describe, it, expect } from 'vitest';
 import { vuetify } from '@/tests/unit/setup';
 
 describe('maintenance page should render', () => {
-	it('should render', async () => {
-		const wrapper = await mountSuspended(Maintenance,{
+	it('should render', () => {
+		const wrapper = mount(Maintenance,{
 			global: {
 				plugins: [
 					vuetify,

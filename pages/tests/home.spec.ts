@@ -1,11 +1,7 @@
-// @vitest-environment nuxt
+import { mount } from '@vue/test-utils';
 import Home from '../home.vue';
-import NotFound from '../not-found.vue';
-import { mountSuspended } from '@nuxt/test-utils/runtime';
 import { describe, it, expect, vi } from 'vitest';
 import { vuetify } from '@/tests/unit/setup';
-import { mount } from '@vue/test-utils';
-import {PageContainer, NotFoundPage} from "@cnamts/synapse-bridge";
 
 describe('home page should render', () => {
 	const mockRouter = {
@@ -17,7 +13,7 @@ describe('home page should render', () => {
 	};
 
 	it('should render', async () => {
-		const wrapper = await mountSuspended(Home,{
+		const wrapper = mount(Home,{
 			global: {
 				plugins: [
 					vuetify,
@@ -29,26 +25,6 @@ describe('home page should render', () => {
 
 		const h1Text = wrapper.find('h1').text();
 		expect(h1Text).toContain('Accueil');
-	});
-
-	it('should call setSupportId method', async () => {
-		const wrapper = mount(NotFound,{
-			global: {
-				plugins: [
-					vuetify,
-				],
-				mocks: {
-					PageContainer,
-					NotFoundPage,
-					$router: mockRouter,
-					$route: mockRoute
-				},
-			},
-		});
-		wrapper.vm.setSupportId();
-		await wrapper.vm.$nextTick();
-
-		expect(mockRouter.push).toHaveBeenCalled();
 	});
 
 	it('renders title from $config', async () => {
