@@ -1,4 +1,5 @@
 # **Starter Kit Vue/Nuxt 3**
+
 =
 
 🗃️ Ce Starter Kit contient les composants du Design System de l'Assurance Maladie réécrits en Vue 3, ainsi que les outils nécessaires pour mettre en place un nouveau projet.
@@ -37,12 +38,13 @@ Pour utiliser ce starter kit, vous devez avoir au moins les versions suivantes d
 - Buildez le projet : `pnpm build`
 
 ## Deploiement
+
 La commande build crée une application Nuxt 3 fonctionnelle, vous pouvez donc la déployer sur n'importe quel
 fournisseur d'hébergement prenant en charge Nuxt.js.
 
 ## Commandes disponibles
 
-```` bash
+```bash
 		"pnpm build": Build du projet,
 		"pnpm dev": Lancement du serveur de développement,
 		"pnpm generate": Génération du site statique,
@@ -50,7 +52,7 @@ fournisseur d'hébergement prenant en charge Nuxt.js.
 		"pnpm test:unit": Lancement des tests unitaires,
 		"pnpm test:e2e": Lancement des tests e2e,
 		"pnpm cypress:open": Ouverture de l'interface graphique de Cypress
-````
+```
 
 ## Contribution
 

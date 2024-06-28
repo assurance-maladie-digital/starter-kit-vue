@@ -1,38 +1,40 @@
 // @vitest-environment nuxt
-import HelloWorld from '../HelloWorld.vue';
-import { mountSuspended } from '@nuxt/test-utils/runtime'
-import { describe, expect, it, vi, beforeEach } from 'vitest'
+import { describe, expect, it, vi, beforeEach } from "vitest";
 
 async function appConfig() {
-	return await $fetch<Record<string, string>>('@/public/json/config.env.json').then((res) => {
+	return await $fetch<Record<string, string>>(
+		"@/public/json/config.env.json",
+	).then((res) => {
 		for (const key in res) {
-			const config = useRuntimeConfig()
-			config.public[key] = res[key]
+			const config = useRuntimeConfig();
+			config.public[key] = res[key];
 		}
-	})
+	});
 }
 
-describe('get config injectEnv', () => {
+describe("get config injectEnv", () => {
 	beforeEach(() => {
 		// Mock the $fetch function
-		vi.stubGlobal('$fetch', vi.fn().mockResolvedValue({
-			title: "Accueil",
-			message: "Bienvenue",
-			theme: "bootstrap"
-		}))
+		vi.stubGlobal(
+			"$fetch",
+			vi.fn().mockResolvedValue({
+				title: "Accueil",
+				message: "Bienvenue",
+				theme: "bootstrap",
+			}),
+		);
 
 		// Mock the config.env.json file
-		vi.mock('@/public/json/config.env.json', () => ({
+		vi.mock("@/public/json/config.env.json", () => ({
 			default: {
 				title: "Accueil",
 				message: "Bienvenue",
-				theme: "bootstrap"
+				theme: "bootstrap",
 			},
-		}))
-	})
+		}));
+	});
 
-	it('should render app config', async () => {
-		const wrapper = await mountSuspended(HelloWorld);
+	it("should render app config", async () => {
 		const config = useRuntimeConfig();
 
 		await appConfig();
@@ -40,21 +42,23 @@ describe('get config injectEnv', () => {
 		expect(config.public.title).toBe("Accueil");
 		expect(config.public.message).toBe("Bienvenue");
 		expect(config.public.theme).toBe("bootstrap");
-	})
+	});
 
-	it('should render custom config', async () => {
-		const wrapper = await mountSuspended(HelloWorld);
+	it("should render custom config", async () => {
 		const config = useRuntimeConfig();
 
 		// Mock the $fetch function
-		vi.stubGlobal('$fetch', vi.fn().mockResolvedValue({
-			title: "Coucou",
-			message: "Bienvenue",
-			theme: "bootsrap"
-		}))
+		vi.stubGlobal(
+			"$fetch",
+			vi.fn().mockResolvedValue({
+				title: "Coucou",
+				message: "Bienvenue",
+				theme: "bootsrap",
+			}),
+		);
 
 		await appConfig();
 
 		expect(config.public.title).toBe("Coucou");
-	})
-})
+	});
+});

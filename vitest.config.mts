@@ -1,24 +1,20 @@
-import { defineVitestConfig } from '@nuxt/test-utils/config'
+import { defineVitestConfig } from "@nuxt/test-utils/config";
 
 export default defineVitestConfig({
 	test: {
-		environment: 'nuxt',
+		environment: "nuxt",
 		coverage: {
 			enabled: true,
-			provider: 'istanbul',
-			reportsDirectory: './tests/unit/coverage',
-			include: [
-				'**/components/**',
-				'**/pages/**',
-				'**/store/**',
-			]
+			provider: "istanbul",
+			reportsDirectory: "./tests/unit/coverage",
+			include: ["**/components/**", "**/pages/**", "**/store/**"],
 		},
 		server: {
 			deps: {
-				inline: [/vuetify.*/]
-			}
+				inline: [/vuetify.*/],
+			},
 		},
 		silent: true,
-		setupFiles: ['./tests/unit/setup.ts']
+		setupFiles: ["./tests/unit/setup.ts"],
 	},
-})
+});

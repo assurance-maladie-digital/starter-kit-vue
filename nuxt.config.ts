@@ -1,4 +1,4 @@
-import {colorTheme} from "@cnamts/design-tokens/src/colors";
+import { colorTheme } from "@cnamts/design-tokens/src/colors";
 import Components from "unplugin-vue-components/vite";
 
 export default defineNuxtConfig({
@@ -8,7 +8,7 @@ export default defineNuxtConfig({
 			title: process.env.TITLE,
 			message: process.env.MESSAGE,
 			theme: process.env.THEME,
-		}
+		},
 	},
 	devtools: { enabled: true },
 	modules: [
@@ -16,14 +16,15 @@ export default defineNuxtConfig({
 		"@nuxtjs/i18n",
 		"dayjs-nuxt",
 		"@pinia/nuxt",
+		"@nuxt/eslint",
 	],
 	vuetify: {
 		vuetifyOptions: {
 			icons: {
-				defaultSet: 'mdi-svg',
+				defaultSet: "mdi-svg",
 			},
 			theme: {
-				defaultTheme: 'light',
+				defaultTheme: "light",
 				themes: {
 					light: {
 						colors: colorTheme,
@@ -33,18 +34,17 @@ export default defineNuxtConfig({
 		},
 	},
 	build: {
-		transpile: ["vuetify", "@cnamts/synapse-bridge", "@cnamts/design-tokens"],
+		transpile: [
+			"vuetify",
+			"@cnamts/synapse-bridge",
+			"@cnamts/design-tokens",
+		],
 	},
 	vite: {
 		// change the component dirs to match our project layout
-		plugins: [
-			Components({ dts: true, dirs: ["./components"]})
-		],
+		plugins: [Components({ dts: true, dirs: ["./components"] })],
 	},
-	css: [
-		"@cnamts/synapse-bridge/style.css",
-		"~/assets/styles/index.scss"
-	],
+	css: ["@cnamts/synapse-bridge/style.css", "~/assets/styles/index.scss"],
 	imports: {
 		dirs: ["./stores"],
 	},
