@@ -1,4 +1,5 @@
 # **Starter Kit Vue/Nuxt 3**
+
 =
 
 🗃️ Ce Starter Kit contient les composants du Design System de l'Assurance Maladie réécrits en Vue 3, ainsi que les outils nécessaires pour mettre en place un nouveau projet.
@@ -9,8 +10,8 @@ SSR désactivé.
 
 Pour utiliser ce starter kit, vous devez avoir au moins les versions suivantes de Node et PNPM :
 
-- Node : 20.11.0
-- PNPM : 8.11.0
+-   Node : 20.11.0
+-   PNPM : 8.11.0
 
 ## Stack Technique
 
@@ -29,20 +30,21 @@ Pour utiliser ce starter kit, vous devez avoir au moins les versions suivantes d
 
 ## Installation et utilisation
 
-- Clonez le dépôt : git clone https://github.com/assurance-maladie-digital/starter-kit-vue.git
-- Accédez au répertoire du projet : `cd starter-kit-vue`
-- Installez les dépendances : `pnpm install`
-- Lancez le serveur de développement : `pnpm dev`
-- Ouvrez votre navigateur et accédez à l'URL : `http://localhost:3000`
-- Buildez le projet : `pnpm build`
+-   Clonez le dépôt : git clone https://github.com/assurance-maladie-digital/starter-kit-vue.git
+-   Accédez au répertoire du projet : `cd starter-kit-vue`
+-   Installez les dépendances : `pnpm install`
+-   Lancez le serveur de développement : `pnpm dev`
+-   Ouvrez votre navigateur et accédez à l'URL : `http://localhost:3000`
+-   Buildez le projet : `pnpm build`
 
 ## Deploiement
+
 La commande build crée une application Nuxt 3 fonctionnelle, vous pouvez donc la déployer sur n'importe quel
 fournisseur d'hébergement prenant en charge Nuxt.js.
 
 ## Commandes disponibles
 
-```` bash
+```bash
 		"pnpm build": Build du projet,
 		"pnpm dev": Lancement du serveur de développement,
 		"pnpm generate": Génération du site statique,
@@ -50,7 +52,7 @@ fournisseur d'hébergement prenant en charge Nuxt.js.
 		"pnpm test:unit": Lancement des tests unitaires,
 		"pnpm test:e2e": Lancement des tests e2e,
 		"pnpm cypress:open": Ouverture de l'interface graphique de Cypress
-````
+```
 
 ## Contribution
 
@@ -58,10 +60,10 @@ Nous encourageons les contributions de la communauté ! Si vous souhaitez contri
 
 ### Fork du dépôt
 
-- Créez une branche pour votre fonctionnalité ou correction de bogue
-- Effectuez les modifications nécessaires
-- Soumettez une pull request
-- Assurez-vous de suivre notre Guide de contribution pour plus de détails.
+-   Créez une branche pour votre fonctionnalité ou correction de bogue
+-   Effectuez les modifications nécessaires
+-   Soumettez une pull request
+-   Assurez-vous de suivre notre Guide de contribution pour plus de détails.
 
 ### Support
 
