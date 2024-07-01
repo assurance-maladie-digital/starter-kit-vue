@@ -17,7 +17,7 @@
 		"lint": "pnpm lint:eslint && pnpm lint:prettier",
 		"lint:eslint": "eslint .",
 		"lint:prettier": "pnpm exec prettier . --write",
-		"lintfix": "eslint . --fix && prettier --write --list-different ."
+		"lint:fix": "eslint . --fix && prettier --write --list-different ."
 	},
 	"dependencies": {
 		"@cnamts/design-tokens": "2.16.6",
