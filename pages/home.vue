@@ -1,7 +1,7 @@
 <template>
 	<div>
 		<h1 class="text-primary">
-			{{ $config && $config.public ? $config.public.title : "Accueil" }}
+			{{ $config && $config.public ? $config.public.title : 'Accueil' }}
 		</h1>
 		<div class="mt-6 mb-12 d-flex align-center justify-center">
 			<VCard width="695" variant="tonal" class="d-flex">
@@ -102,10 +102,10 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from "vue";
-import { BackBtn } from "@cnamts/synapse-bridge";
-import { useCounterStore } from "~/stores/counter";
-import { useNotificationStore } from "~/stores/notifications";
+import { defineComponent } from 'vue'
+import { BackBtn } from '@cnamts/synapse-bridge'
+import { useCounterStore } from '~/stores/counter'
+import { useNotificationStore } from '~/stores/notifications'
 
 export default defineComponent({
 	components: {
@@ -115,19 +115,19 @@ export default defineComponent({
 		return {
 			counterStore: useCounterStore(),
 			notificationStore: useNotificationStore(),
-		};
+		}
 	},
 	methods: {
 		createNotification() {
 			const payload = {
-				message: "Notification de test",
-				type: "success",
-			};
-			this.notificationStore.create(payload);
+				message: 'Notification de test',
+				type: 'success',
+			}
+			this.notificationStore.create(payload)
 		},
 		removeNotification() {
-			this.notificationStore.remove();
+			this.notificationStore.remove()
 		},
 	},
-});
+})
 </script>

@@ -10,8 +10,8 @@ SSR désactivé.
 
 Pour utiliser ce starter kit, vous devez avoir au moins les versions suivantes de Node et PNPM :
 
-- Node : 20.11.0
-- PNPM : 8.11.0
+-   Node : 20.11.0
+-   PNPM : 8.11.0
 
 ## Stack Technique
 
@@ -30,12 +30,12 @@ Pour utiliser ce starter kit, vous devez avoir au moins les versions suivantes d
 
 ## Installation et utilisation
 
-- Clonez le dépôt : git clone https://github.com/assurance-maladie-digital/starter-kit-vue.git
-- Accédez au répertoire du projet : `cd starter-kit-vue`
-- Installez les dépendances : `pnpm install`
-- Lancez le serveur de développement : `pnpm dev`
-- Ouvrez votre navigateur et accédez à l'URL : `http://localhost:3000`
-- Buildez le projet : `pnpm build`
+-   Clonez le dépôt : git clone https://github.com/assurance-maladie-digital/starter-kit-vue.git
+-   Accédez au répertoire du projet : `cd starter-kit-vue`
+-   Installez les dépendances : `pnpm install`
+-   Lancez le serveur de développement : `pnpm dev`
+-   Ouvrez votre navigateur et accédez à l'URL : `http://localhost:3000`
+-   Buildez le projet : `pnpm build`
 
 ## Deploiement
 
@@ -60,10 +60,10 @@ Nous encourageons les contributions de la communauté ! Si vous souhaitez contri
 
 ### Fork du dépôt
 
-- Créez une branche pour votre fonctionnalité ou correction de bogue
-- Effectuez les modifications nécessaires
-- Soumettez une pull request
-- Assurez-vous de suivre notre Guide de contribution pour plus de détails.
+-   Créez une branche pour votre fonctionnalité ou correction de bogue
+-   Effectuez les modifications nécessaires
+-   Soumettez une pull request
+-   Assurez-vous de suivre notre Guide de contribution pour plus de détails.
 
 ### Support
 

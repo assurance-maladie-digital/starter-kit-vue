@@ -10,8 +10,8 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from "vue";
-import { PageContainer, NotFoundPage } from "@cnamts/synapse-bridge";
+import { defineComponent } from 'vue'
+import { PageContainer, NotFoundPage } from '@cnamts/synapse-bridge'
 
 export default defineComponent({
 	components: {
@@ -23,10 +23,10 @@ export default defineComponent({
 			this.$router.push({
 				path: this.$route.path,
 				query: {
-					support_id: "1178926558455813315",
+					support_id: '1178926558455813315',
 				},
-			});
+			})
 		},
 	},
-});
+})
 </script>

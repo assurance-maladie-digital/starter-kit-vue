@@ -1,5 +1,9 @@
 const config = {
-	htmlWhitespaceSensitivity: "ignore",
-};
+	trailingComma: 'es5',
+	tabWidth: 4,
+	semi: false,
+	singleQuote: true,
+	htmlWhitespaceSensitivity: 'ignore',
+}
 
-export default config;
+export default config
