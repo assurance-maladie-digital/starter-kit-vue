@@ -11,7 +11,7 @@
 		<v-row justify="center">
 			<v-col cols="12" md="4">
 				<v-card color="grey-lighten-4" class="mx-auto">
-					<v-card-title> Exemple de composant Nuxt </v-card-title>
+					<v-card-title>Exemple de composant Nuxt</v-card-title>
 					<v-card-item>
 						<HelloWorld
 							:msg="
@@ -25,7 +25,7 @@
 			</v-col>
 			<v-col cols="12" md="4">
 				<v-card color="grey-lighten-4" class="mx-auto">
-					<v-card-title> Exemple de composant DS </v-card-title>
+					<v-card-title>Exemple de composant DS</v-card-title>
 					<v-card-item>
 						<BackBtn to="/home" />
 						<br />
@@ -42,7 +42,7 @@
 			</v-col>
 			<v-col cols="12" md="4">
 				<v-card color="grey-lighten-4" class="mx-auto">
-					<v-card-title> Test des stores </v-card-title>
+					<v-card-title>Test des stores</v-card-title>
 					<v-card-item>
 						<div>Compteur: {{ counterStore?.count }}</div>
 						<div
@@ -52,20 +52,23 @@
 								color="primary"
 								class="ma-2"
 								@click="counterStore?.increment"
-								>Incrémenter</v-btn
 							>
+								Incrémenter
+							</v-btn>
 							<v-btn
 								color="primary"
 								class="ma-2"
 								@click="counterStore?.decrement"
-								>Décrémenter</v-btn
 							>
+								Décrémenter
+							</v-btn>
 							<v-btn
 								color="primary"
 								class="ma-2"
 								@click="counterStore?.reset"
-								>Réinitialiser</v-btn
 							>
+								Réinitialiser
+							</v-btn>
 						</div>
 					</v-card-item>
 					<v-card-item>
@@ -80,14 +83,16 @@
 								color="primary"
 								class="ma-2"
 								@click="createNotification"
-								>Créer une notification</v-btn
 							>
+								Créer une notification
+							</v-btn>
 							<v-btn
 								color="primary"
 								class="ma-2"
 								@click="removeNotification"
-								>Supprimer une notification</v-btn
 							>
+								Supprimer une notification
+							</v-btn>
 						</div>
 					</v-card-item>
 				</v-card>
