@@ -4,7 +4,7 @@ import * as directives from 'vuetify/directives'
 
 export const vuetify = createVuetify({
 	components,
-	directives
+	directives,
 })
 
 global.ResizeObserver = require('resize-observer-polyfill')

@@ -7,18 +7,14 @@ export default defineVitestConfig({
 			enabled: true,
 			provider: 'istanbul',
 			reportsDirectory: './tests/unit/coverage',
-			include: [
-				'**/components/**',
-				'**/pages/**',
-				'**/store/**',
-			]
+			include: ['**/components/**', '**/pages/**', '**/store/**'],
 		},
 		server: {
 			deps: {
-				inline: [/vuetify.*/]
-			}
+				inline: [/vuetify.*/],
+			},
 		},
 		silent: true,
-		setupFiles: ['./tests/unit/setup.ts']
+		setupFiles: ['./tests/unit/setup.ts'],
 	},
 })
