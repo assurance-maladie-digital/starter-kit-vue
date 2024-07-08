@@ -72,27 +72,23 @@
 						</div>
 					</v-card-item>
 					<v-card-item>
-						<div>
-							Notification:
-							{{ notificationStore?.notificationPayload }}
+						<div class="notif">
 						</div>
-						<div
-							class="d-flex flex-wrap align-center justify-center"
-						>
-							<v-btn
+						<div class="d-flex flex-wrap align-center justify-center">
+							<VBtn
 								color="primary"
-								class="ma-2"
+								class="ma-2 create"
 								@click="createNotification"
 							>
 								Créer une notification
-							</v-btn>
-							<v-btn
+							</VBtn>
+							<VBtn
 								color="primary"
-								class="ma-2"
+								class="ma-2 create"
 								@click="removeNotification"
 							>
 								Supprimer une notification
-							</v-btn>
+							</VBtn>
 						</div>
 					</v-card-item>
 				</v-card>
@@ -105,8 +101,7 @@
 import { defineComponent } from 'vue'
 import { BackBtn } from '@cnamts/synapse-bridge'
 import { useCounterStore } from '~/stores/counter'
-import { useNotificationStore } from '~/stores/notifications'
-
+import { mapActions, mapGetters } from 'vuex'
 export default defineComponent({
 	components: {
 		BackBtn,
@@ -114,19 +109,27 @@ export default defineComponent({
 	data() {
 		return {
 			counterStore: useCounterStore(),
-			notificationStore: useNotificationStore(),
 		}
 	},
+	computed: {
+		...mapGetters('notification', {
+			notificationData: 'notification',
+		}),
+	},
 	methods: {
+		...mapActions('notification', {
+			dispatchNotification: 'addNotification',
+			dispatchClearNotification: 'clearNotification',
+		}),
 		createNotification() {
-			const payload = {
-				message: 'Notification de test',
-				type: 'success',
-			}
-			this.notificationStore.create(payload)
+			this.dispatchNotification({
+				ref: '1',
+				type: 'info',
+				message: 'Exemple de notification 1.',
+			})
 		},
 		removeNotification() {
-			this.notificationStore.remove()
+			this.dispatchClearNotification()
 		},
 	},
 })

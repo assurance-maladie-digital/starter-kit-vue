@@ -6,6 +6,11 @@
 		"verbatimModuleSyntax": false,
 		"moduleResolution": "node",
 		"noUncheckedIndexedAccess": true,
-		"allowJs": true
+		"allowJs": true,
+		"paths": {
+			"@cnamts/synapse-bridge/modules/notification": [
+				"node_modules/@cnamts/synapse-bridge/src/modules/notification/index.ts"
+			]
+		}
 	}
 }
