@@ -9,8 +9,8 @@ dependencies:
     specifier: 2.16.6
     version: 2.16.6
   '@cnamts/synapse-bridge':
-    specifier: 1.4.4-alpha.0
-    version: 1.4.4-alpha.0(vue@3.4.29)(vuetify@3.6.10)(vuex@4.1.0)
+    specifier: 1.4.5-alpha.0
+    version: 1.4.5-alpha.0(vue@3.4.29)(vuetify@3.6.10)(vuex@4.1.0)
   '@mdi/js':
     specifier: 7.2.96
     version: 7.2.96
@@ -502,8 +502,8 @@ packages:
     resolution: {integrity: sha512-at3kWqPxgNuVFcnoiPEex96/DXG22g6osI+IDNA2ttuBb2SfClDSRlrj/MroVMUfzvLGRzf3IggO5uG98fqiJQ==}
     dev: false
 
-  /@cnamts/synapse-bridge@1.4.4-alpha.0(vue@3.4.29)(vuetify@3.6.10)(vuex@4.1.0):
-    resolution: {integrity: sha512-bqx92b6qxiRkFi3N6yD806bZytpz5KWbNrgUgTVyEHNftd9J7h0SiJ5xk8wBeRje+TKD0p7g7Lm3o6gL81KU5g==}
+  /@cnamts/synapse-bridge@1.4.5-alpha.0(vue@3.4.29)(vuetify@3.6.10)(vuex@4.1.0):
+    resolution: {integrity: sha512-jMn4Qimqh76udALtZ7I4lZuV82glByGclsZb8cYnCv9Efr32l76G0VRE5qSF73GneGJ0y/vmmLCtlHVwqq7pXg==}
     peerDependencies:
       vue: ^3.4.21
       vuetify: 3.5.10
