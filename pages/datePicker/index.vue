@@ -1,66 +1,54 @@
 <template>
-	<PageContainer>
-		<BackBtn to="/"/>
-		<div class="d-flex justify-sm-space-around">
-			<div class="wide-column">
-				<h3>Range</h3>
-				<DatePicker
-					v-model="datePickerdate"
-					range
-				/>
-				<h3>Mandatory</h3>
-				<date-picker v-model="date" :rules="validRules" label="Date"/>
-				<h3>Warning Rules</h3>
-				<date-picker v-model="date" :warning-rules="warningRules" hint="defaultHint" label="Date" outlined/>
+	<div class="d-flex justify-sm-space-around">
+		<div class="wide-column">
+			<h3>Range</h3>
+			<DatePicker
+				v-model="datePickerdate"
+				range
+			/>
+			<h3>Mandatory</h3>
+			<date-picker v-model="date" :rules="validRules" label="Date"/>
+			<h3>Warning Rules</h3>
+			<date-picker v-model="date" :warning-rules="warningRules" hint="defaultHint" label="Date" outlined/>
 
-				<h3>No Calendar</h3>
-				<date-picker v-model="date" :hint="defaultHint" label="Date" no-calendar/>
+			<h3>No Calendar</h3>
+			<date-picker v-model="date" :hint="defaultHint" label="Date" no-calendar/>
 
-				<h3>TextField Activator</h3>
-				<date-picker v-model="date" :hint="defaultHint" label="Date" text-field-activator/>
+			<h3>TextField Activator</h3>
+			<date-picker v-model="date" :hint="defaultHint" label="Date" text-field-activator/>
 
-				<h3 class="mt-4">Show weekends</h3>
-				<date-picker v-model="date" :hint="defaultHint" label="Date" show-weekends/>
+			<h3 class="mt-4">Show weekends</h3>
+			<date-picker v-model="date" :hint="defaultHint" label="Date" show-weekends/>
 
-				<h3 class="mt-4">Disabled</h3>
-				<date-picker v-model="date" :hint="defaultHint" disabled label="Date"/>
-			</div>
-			<div class="min-w-100">
-			<h3 class="mt-4">Outlined</h3>
-			<date-picker v-model="date" :hint="defaultHint" label="Date" outlined/>
-
-			<h3 class="mt-4">Birthdate</h3>
-			<date-picker v-model="date" :hint="defaultHint" birthdate label="Date d'anniversaire"/>
-
-			<h3 class="mt-4">Range</h3>
-			<div class="wide-column">
-				{{ dateRange }}
-				<date-picker
-					v-model="dateRange"
-					clearable
-					outlined
-					range
-				/>
-			</div>
-
-			<h3 class="mt-4">DateFormat</h3>
-			{{ dateToFormat }}
-			<date-picker v-model="dateToFormat" dateFormat="DD-MM-YYYY" hint="JJ-MM-YYYY" label="Date"/>
-			<h3 class="mt-4">DateFormatReturn JJ/MM/YY</h3>
-			{{ dateFormatReturn }}
-			<date-picker v-model="dateFormatReturn" :hint="defaultHint" dateFormatReturn="DD/MM/YY" label="Date"/>
-			</div>
+			<h3 class="mt-4">Disabled</h3>
+			<date-picker v-model="date" :hint="defaultHint" disabled label="Date"/>
 		</div>
-	</PageContainer>
-	<FooterBar
-		hide-a11y-link
-		hide-cgu-link
-		hide-cookies-link
-		hide-legal-notice-link
-		hide-sitemap-link
-	>
-		<p class="text-secondary mb-0">Contenu supplémentaire.</p>
-	</FooterBar>
+		<div class="min-w-100">
+		<h3 class="mt-4">Outlined</h3>
+		<date-picker v-model="date" :hint="defaultHint" label="Date" outlined/>
+
+		<h3 class="mt-4">Birthdate</h3>
+		<date-picker v-model="date" :hint="defaultHint" birthdate label="Date d'anniversaire"/>
+
+		<h3 class="mt-4">Range</h3>
+		<div class="wide-column">
+			{{ dateRange }}
+			<date-picker
+				v-model="dateRange"
+				clearable
+				outlined
+				range
+			/>
+		</div>
+
+		<h3 class="mt-4">DateFormat</h3>
+		{{ dateToFormat }}
+		<date-picker v-model="dateToFormat" dateFormat="DD-MM-YYYY" hint="JJ-MM-YYYY" label="Date"/>
+		<h3 class="mt-4">DateFormatReturn JJ/MM/YY</h3>
+		{{ dateFormatReturn }}
+		<date-picker v-model="dateFormatReturn" :hint="defaultHint" dateFormatReturn="DD/MM/YY" label="Date"/>
+		</div>
+	</div>
 </template>
 
 <script lang="ts">
@@ -71,64 +59,13 @@ import {notAfterToday} from "@cnamts/synapse-bridge/rules/notAfterToday";
 import {notBeforeToday} from "@cnamts/synapse-bridge/rules/notBeforeToday";
 import dayjs from "dayjs";
 import {
-	BackBtn,
-	BackToTopBtn,
-	ChipList,
-	CookieBanner,
-	CookiesPage,
-	CopyBtn,
-	DataList,
-	DataListGroup,
 	DatePicker,
-	DialogBox,
-	ErrorPage,
-	FooterBar,
-	FooterWrapper,
-	FranceConnectBtn,
-	HeaderBar,
-	HeaderLoading,
-	Logo,
-	LogoBrandSection,
-	MaintenancePage,
-	NotFoundPage,
-	NotificationBar,
-	PageContainer,
-	PasswordField,
-	PeriodField,
-	SubHeader,
-	UserMenuBtn
 } from "@cnamts/synapse-bridge";
 import AppHeader from "@/pages/commons/AppHeader.vue";
 
 export default defineComponent({
 	components: {
-		AppHeader,
-		PageContainer,
-		HeaderBar,
-		FooterBar,
-		UserMenuBtn,
-		DialogBox,
-		DataList,
-		DataListGroup,
-		FooterWrapper,
-		SubHeader,
-		BackBtn,
-		FranceConnectBtn,
-		CopyBtn,
-		Logo,
-		HeaderLoading,
-		BackToTopBtn,
-		CookieBanner,
-		CookiesPage,
-		LogoBrandSection,
-		ChipList,
-		NotificationBar,
-		ErrorPage,
-		MaintenancePage,
-		NotFoundPage,
-		PasswordField,
 		DatePicker,
-		PeriodField
 	},
 	data() {
 		return {

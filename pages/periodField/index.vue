@@ -1,76 +1,39 @@
 <template>
-	<PageContainer>
-		<BackBtn to="/"/>
-		<div class="mt-4 my-4 d-flex justify-sm-space-around">
-			<div>
-				<h3>Basique</h3>
-				<PeriodField v-model="date"/>
-				<p>Date saisie : {{ date }}</p>
-				<h3>No-prepend-icon</h3>
-				<PeriodField v-model="date" no-prepend-icon />
-				<p>Date saisie : {{ date }}</p
-				>
-				<h3>Append</h3>
-				<PeriodField v-model="date" append-icon />
-				<p>Date saisie : {{ date }}</p>
-				<h3>Outlined</h3>
-				<PeriodField v-model="date" outlined/>
-				<p>Date saisie : {{ date }}</p>
-			</div>
-			<div>
-				<h3>Label</h3>
-				<PeriodField v-model="date" label="Periode"/>
-				<p>Date saisie : {{ date }}</p>
-				<h3>Disabled</h3>
-				<PeriodField v-model="date" disabled/>
-				<p>Date saisie : {{ date }}</p>
-				<PeriodField v-model="date2"/>
-				<p>Date saisie : {{ date2 }}</p>
-				<p>Date saisie : {{ date3 }}</p>
-				<h3>Change Format DD/MM/YYYY to YYYY/MM/DD</h3>
-				<PeriodField v-model="changingDate" date-format="DD/MM/yyyy" date-format-return="yyyy/MM/dd"/>
-				<p>Date saisie : {{ changingDate }}</p>
-			</div>
+	<div class="mt-4 my-4 d-flex justify-sm-space-around">
+		<div>
+			<h3>Basique</h3>
+			<PeriodField v-model="date"/>
+			<p>Date saisie : {{ date }}</p>
+			<h3>No-prepend-icon</h3>
+			<PeriodField v-model="date" no-prepend-icon />
+			<p>Date saisie : {{ date }}</p
+			>
+			<h3>Append</h3>
+			<PeriodField v-model="date" append-icon />
+			<p>Date saisie : {{ date }}</p>
+			<h3>Outlined</h3>
+			<PeriodField v-model="date" outlined/>
+			<p>Date saisie : {{ date }}</p>
 		</div>
-	</PageContainer>
-	<FooterBar
-		hide-a11y-link
-		hide-cgu-link
-		hide-cookies-link
-		hide-legal-notice-link
-		hide-sitemap-link
-	>
-		<p class="text-secondary mb-0">Contenu supplémentaire.</p>
-	</FooterBar>
+		<div>
+			<h3>Label</h3>
+			<PeriodField v-model="date" label="Periode"/>
+			<p>Date saisie : {{ date }}</p>
+			<h3>Disabled</h3>
+			<PeriodField v-model="date" disabled/>
+			<p>Date saisie : {{ date }}</p>
+			<PeriodField v-model="date2"/>
+			<p>Date saisie : {{ date2 }}</p>
+			<p>Date saisie : {{ date3 }}</p>
+			<h3>Change Format DD/MM/YYYY to YYYY/MM/DD</h3>
+			<PeriodField v-model="changingDate" date-format="DD/MM/yyyy" date-format-return="yyyy/MM/dd"/>
+			<p>Date saisie : {{ changingDate }}</p>
+		</div>
+	</div>
 </template>
 <script lang="ts">
 import {defineComponent} from "vue";
 import {
-	PageContainer,
-	HeaderBar,
-	FooterBar,
-	DataList,
-	DataListGroup,
-	UserMenuBtn,
-	DialogBox,
-	FooterWrapper,
-	SubHeader,
-	BackBtn,
-	FranceConnectBtn,
-	CopyBtn,
-	Logo,
-	HeaderLoading,
-	BackToTopBtn,
-	CookieBanner,
-	CookiesPage,
-	LogoBrandSection,
-	ChipList,
-	NotificationBar,
-	ErrorPage,
-	MaintenancePage,
-	NotFoundPage,
-	PasswordField,
-	DatePicker,
 	PeriodField
 } from "@cnamts/synapse-bridge";
 import dayjs from "dayjs";
@@ -78,32 +41,6 @@ import AppHeader from "@/pages/commons/AppHeader.vue";
 
 export default defineComponent({
 	components: {
-		AppHeader,
-		PageContainer,
-		HeaderBar,
-		FooterBar,
-		UserMenuBtn,
-		DialogBox,
-		DataList,
-		DataListGroup,
-		FooterWrapper,
-		SubHeader,
-		BackBtn,
-		FranceConnectBtn,
-		CopyBtn,
-		Logo,
-		HeaderLoading,
-		BackToTopBtn,
-		CookieBanner,
-		CookiesPage,
-		LogoBrandSection,
-		ChipList,
-		NotificationBar,
-		ErrorPage,
-		MaintenancePage,
-		NotFoundPage,
-		PasswordField,
-		DatePicker,
 		PeriodField
 	},
 	data() {

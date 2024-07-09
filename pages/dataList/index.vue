@@ -1,178 +1,116 @@
 <template>
-	<PageContainer>
-		<BackBtn to="/"/>
-		<h2>Sans icone</h2>
-		<div class="d-flex">
-			<DataList :items="items" />
-			<DataList
-				:items="items"
-				row
-			/>
-			<DataList
-				:items="items"
-				loading
-			/>
-			<DataList
-				:items="items"
-				loading
-				row
-			/>
-			<DataList
-				:items="items"
-				heading-loading
-				loading
-			/>
-			<DataList
-				:items="items"
-				:items-number-loading="4"
-				loading
-			/>
-			<DataList
-				:items="items"
-				list-title="Exemple"
-			/>
-		</div>
-		<div class="d-flex">
-			<h2>Avec icone</h2>
-			<DataList
-				:items="itemsWithIcons"
-				:icons="icons"
-			/>
-		</div>
-		<div class="d-flex">
-			<h2>Avec action</h2>
-			<DataList
-				:items="itemsWithActions"
-				@click:item-action="updateBirthdate"
-			/>
-		</div>
-		<div class="d-flex">
-			<h2>Avec chips</h2>
-			<DataList :items="itemsWithChips" />
-		</div>
-		<div class="d-flex">
+	<h2>Sans icone</h2>
+	<div class="d-flex">
+		<DataList :items="items" />
+		<DataList
+			:items="items"
+			row
+		/>
+		<DataList
+			:items="items"
+			loading
+		/>
+		<DataList
+			:items="items"
+			loading
+			row
+		/>
+		<DataList
+			:items="items"
+			heading-loading
+			loading
+		/>
+		<DataList
+			:items="items"
+			:items-number-loading="4"
+			loading
+		/>
+		<DataList
+			:items="items"
+			list-title="Exemple"
+		/>
+	</div>
+	<div class="d-flex">
+		<h2>Avec icone</h2>
+		<DataList
+			:items="itemsWithIcons"
+			:icons="icons"
+		/>
+	</div>
+	<div class="d-flex">
+		<h2>Avec action</h2>
+		<DataList
+			:items="itemsWithActions"
+			@click:item-action="updateBirthdate"
+		/>
+	</div>
+	<div class="d-flex">
+		<h2>Avec chips</h2>
+		<DataList :items="itemsWithChips" />
+	</div>
+	<div class="d-flex">
 
-			<DataList
-				:items="itemsWithHtmlValues"
-				item-width="auto"
-				render-html-value
-			/>
+		<DataList
+			:items="itemsWithHtmlValues"
+			item-width="auto"
+			render-html-value
+		/>
 
-			<DataList
-				:items="itemsWithOptions"
-				:icons="icons"
-			/>
+		<DataList
+			:items="itemsWithOptions"
+			:icons="icons"
+		/>
 
-			<DataList :items="items">
-				<template #title>
-					<h3 class="text-subtitle-1 font-weight-bold mb-3">
-						Liste de données
+		<DataList :items="items">
+			<template #title>
+				<h3 class="text-subtitle-1 font-weight-bold mb-3">
+					Liste de données
 
-						<VTooltip bottom>
-							<template #activator="{ props }">
-								<VIcon v-bind="props">
-									{{ icons.mdiInformationOutline }}
-								</VIcon>
-							</template>
+					<VTooltip bottom>
+						<template #activator="{ props }">
+							<VIcon v-bind="props">
+								{{ icons.mdiInformationOutline }}
+							</VIcon>
+						</template>
 
-							<span>Cette liste contient des données concernant le patient.</span>
-						</VTooltip>
-					</h3>
-				</template>
-			</DataList>
-		</div>
-		<div>
-			<h2> DataList group</h2>
-			<DataListGroup
-				:items="itemsList"
-				:icons="iconsList"
-				@click:list-item="updateBirthdate"
-			/>
-			<br /><br />
-			<DataListGroup
-				:items="itemsList"
-				item-width="300px"
-			/>
-			<br /><br />
-			<DataListGroup
-				:items="itemsList"
-				loading
-			/>
-		</div>
-	</PageContainer>
-	<FooterBar
-		hide-a11y-link
-		hide-cgu-link
-		hide-cookies-link
-		hide-legal-notice-link
-		hide-sitemap-link
-	>
-		<p class="text--secondary mb-0">Contenu supplémentaire.</p>
-	</FooterBar>
+						<span>Cette liste contient des données concernant le patient.</span>
+					</VTooltip>
+				</h3>
+			</template>
+		</DataList>
+	</div>
+	<div>
+		<h2> DataList group</h2>
+		<DataListGroup
+			:items="itemsList"
+			:icons="iconsList"
+			@click:list-item="updateBirthdate"
+		/>
+		<br /><br />
+		<DataListGroup
+			:items="itemsList"
+			item-width="300px"
+		/>
+		<br /><br />
+		<DataListGroup
+			:items="itemsList"
+			loading
+		/>
+	</div>
 </template>
 
 <script lang="ts">
 import {defineComponent} from "vue";
 import { mdiCalendar, mdiAccount, mdiInformationOutline, mdiDoctor, mdiCardAccountDetails, mdiPencil } from '@mdi/js'
 import {
-	PageContainer,
-	HeaderBar,
-	FooterBar,
 	DataList,
 	DataListGroup,
-	UserMenuBtn,
-	DialogBox,
-	FooterWrapper,
-	SubHeader,
-	BackBtn,
-	FranceConnectBtn,
-	CopyBtn,
-	Logo,
-	HeaderLoading,
-	BackToTopBtn,
-	CookieBanner,
-	CookiesPage,
-	LogoBrandSection,
-	ChipList,
-	NotificationBar,
-	ErrorPage,
-	MaintenancePage,
-	NotFoundPage,
-	PasswordField,
-	DatePicker,
-	PeriodField
 } from "@cnamts/synapse-bridge";
-import AppHeader from "@/pages/commons/AppHeader.vue";
 
 export default defineComponent({
 	components: {
-		AppHeader,
-		PageContainer,
-		HeaderBar,
-		FooterBar,
-		UserMenuBtn,
-		DialogBox,
 		DataList,
 		DataListGroup,
-		FooterWrapper,
-		SubHeader,
-		BackBtn,
-		FranceConnectBtn,
-		CopyBtn,
-		Logo,
-		HeaderLoading,
-		BackToTopBtn,
-		CookieBanner,
-		CookiesPage,
-		LogoBrandSection,
-		ChipList,
-		NotificationBar,
-		ErrorPage,
-		MaintenancePage,
-		NotFoundPage,
-		PasswordField,
-		DatePicker,
-		PeriodField
 	},
 	data() {
 		return {
