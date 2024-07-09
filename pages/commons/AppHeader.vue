@@ -13,32 +13,8 @@ import { HeaderBar } from "@cnamts/synapse-bridge";
 		 to: '/home',
 	 },
 	 {
-		 label: 'Tokens',
-		 to: '/tokens',
-	 },
-	 {
-		 label: 'Maintenance',
-		 to: '/maintenance',
-	 },
-	 {
-		 label: 'Erreur',
-		 to: '/not-found',
-	 },
-	 {
 		 label: 'Header',
 		 to: '/headers'
-	 },
-	 {
-		 label: 'Maintenance',
-		 to: '/maintenance'
-	 },
-	 {
-		 label: 'Error Page',
-		 to: '/error'
-	 },
-	 {
-		 label: 'Not Found Page',
-		 to: '/not-found'
 	 },
 	 {
 		 label: 'Btns',
@@ -75,7 +51,15 @@ import { HeaderBar } from "@cnamts/synapse-bridge";
 	 {
 		 label: 'Password Field',
 		 to: '/password'
-	 }
+	 },
+	 {
+		 label: 'Maintenance',
+		 to: '/maintenance',
+	 },
+	 {
+		 label: 'Not Found',
+		 to: '/not-found',
+	 },
  ]
 
 </script>

@@ -9,6 +9,6 @@ export default <RouterConfig>{
 			path: '/',
 			component: () =>
 				import('~/pages/home.vue').then((r) => r.default || r),
-		},
+		}
 	],
 }
