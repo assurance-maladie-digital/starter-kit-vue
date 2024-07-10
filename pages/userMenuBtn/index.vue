@@ -107,6 +107,53 @@
 			text-to-copy="example-5"
 		/>
 	</div>
+
+	<h2>SelectBtnField</h2>
+	<div class="d-flex justify-sm-space-between">
+		<SelectBtnField
+			v-model="selectBtnFieldvalue"
+			:items="selectBtnFielItems"
+			label="Moyen de contact"
+			hint="Par défaut, le moyen de contact est l’email."
+		/>
+
+		<SelectBtnField
+			v-model="selectBtnFieldvalue"
+			:items="selectBtnFielItems"
+			multiple
+			label="Moyen de contact"
+		/>
+
+		<SelectBtnField
+			v-model="selectBtnFieldvalue"
+			:items="selectBtnFielItems"
+			inline
+			label="Moyen de contact"
+		/>
+	</div>
+	<div class="d-flex justify-left mt-4">
+		<SelectBtnField
+			v-model="selectBtnFieldvalue"
+			:items="selectBtnFielItems"
+			v-model:error="error"
+			v-model:error-messages="errorMessages"
+			label="Moyen de contact"
+		/>
+
+		<VBtn
+			color="primary"
+			class="mt-3"
+			@click="resetExample"
+		>
+			Réinitialiser
+		</VBtn>
+	</div>
+
+	<h2>DownloadBtn</h2>
+	<div class="d-flex justify-sm-space-between"></div>
+
+	<h2>LangBtn</h2>
+	<div class="d-flex justify-sm-space-between"></div>
 </template>
 
 <script lang="ts">
@@ -117,9 +164,13 @@ import {
 	FranceConnectBtn,
 	CopyBtn,
 	BackToTopBtn,
-	UserMenuBtn
+	UserMenuBtn,
+	SelectBtnField,
+	DownloadBtn,
+	LangBtn,
 } from "@cnamts/synapse-bridge";
-import AppHeader from "@/pages/commons/AppHeader.vue";
+
+import { SelectBtnItem } from '@cnamts/synapse-bridge/src/patterns/SelectBtnField/types';
 
 export default defineComponent({
 	components: {
@@ -128,6 +179,9 @@ export default defineComponent({
 		FranceConnectBtn,
 		CopyBtn,
 		BackToTopBtn,
+		SelectBtnField,
+		DownloadBtn,
+		LangBtn,
 	},
 	data() {
 		return {
@@ -164,11 +218,37 @@ export default defineComponent({
 					class: 'd-none'
 				}
 			},
+			selectBtnFieldvalue: [] as string[] | null,
+			selectBtnFielItems: [
+				{
+					text: 'Email',
+					value: 'email'
+				},
+				{
+					text: 'Courrier',
+					value: 'courrier'
+				},
+				{
+					text: 'SMS',
+					value: 'sms'
+				},
+				{
+					text: 'Autre',
+					value: 'other',
+					unique: true
+				}
+			] as SelectBtnItem[],
+			error: true
 		}
 	},
 	computed: {
 	},
 	methods: {
+		resetExample(): void {
+			this.selectBtnFieldvalue = null;
+			this.error = true;
+			this.errorMessages = ['Le champ est requis.'];
+		}
 	}
 });
 </script>
