@@ -94,6 +94,7 @@
 	<p>
 		{{ generateFakeWords(4000) }}
 	</p>
+	<BackToTopBtn />
 </template>
 
 <script lang="ts">
@@ -101,14 +102,16 @@ import {defineComponent} from "vue";
 import {
 	HeaderBar,
 	UserMenuBtn,
-	BackBtn
+	BackBtn,
+	BackToTopBtn
 } from "@cnamts/synapse-bridge";
 
 export default defineComponent({
 	components: {
 		HeaderBar,
 		UserMenuBtn,
-		BackBtn
+		BackBtn,
+		BackToTopBtn
 	},
 	data() {
 		return {
