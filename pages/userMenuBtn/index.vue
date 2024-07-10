@@ -190,7 +190,21 @@
 	</div>
 
 	<h2>LangBtn</h2>
-	<div class="d-flex justify-sm-space-between"></div>
+	<div class="d-flex justify-sm-space-between">
+		<LangBtn v-model="value1" />
+		{{ value1 }}
+		<br /><br />
+		<LangBtn
+			v-model="value2"
+			:available-languages="[
+				'fr',
+				'en',
+				'de',
+				'zh'
+			]"
+		/>
+		{{ value2 }}
+	</div>
 </template>
 
 <script lang="ts">
@@ -286,7 +300,10 @@ export default defineComponent({
 
 			downloadIcon: mdiDownload,
 			fileIcon: mdiFile,
-			useFallback: true
+			useFallback: true,
+
+			value1: 'fr',
+			value2: 'en',
 		}
 	},
 	computed: {
