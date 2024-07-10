@@ -150,7 +150,44 @@
 	</div>
 
 	<h2>DownloadBtn</h2>
-	<div class="d-flex justify-sm-space-between"></div>
+	<div class="d-flex justify-sm-space-between">
+		<DownloadBtn
+			notification="Super !"
+			:file-promise="getFileFromApi"
+			:fallback-filename="fallbackFilename"
+		>
+			Télécharger mon attestation
+		</DownloadBtn>
+
+		<DownloadBtn
+			:file-promise="getFileFromApi"
+			:vuetify-options="vuetifyOptions"
+			:outlined="false"
+			tile
+			color="white"
+			width="396px"
+			class="text-primary"
+		>
+			<VIcon
+				color="grey"
+				class="flex-shrink-0 mr-2"
+				:class="{ 'd-none': $vuetify.display.smAndDown }"
+			>
+				{{ fileIcon }}
+			</VIcon>
+
+			justificatif.txt
+
+			<VSpacer class="ml-2" />
+
+			<VIcon
+				color="primary"
+				class="flex-shrink-0"
+			>
+				{{ downloadIcon }}
+			</VIcon>
+		</DownloadBtn>
+	</div>
 
 	<h2>LangBtn</h2>
 	<div class="d-flex justify-sm-space-between"></div>
@@ -172,6 +209,11 @@ import {
 
 import { SelectBtnItem } from '@cnamts/synapse-bridge/src/patterns/SelectBtnField/types';
 
+import { mdiDownload, mdiFile } from '@mdi/js';
+import {AxiosResponse} from "axios";
+
+const file: Blob = new Blob(['Hello, world!'], { type: 'text/plain' });
+
 export default defineComponent({
 	components: {
 		UserMenuBtn,
@@ -186,6 +228,7 @@ export default defineComponent({
 	data() {
 		return {
 			backIcon:mdiChevronLeft,
+			mdiContentDuplicate: mdiContentDuplicate,
 			items: [
 				'Administration',
 				'Profil',
@@ -238,17 +281,37 @@ export default defineComponent({
 					unique: true
 				}
 			] as SelectBtnItem[],
-			error: true
+			error: true,
+			errorMessages: [] as string[],
+
+			downloadIcon: mdiDownload,
+			fileIcon: mdiFile,
+			useFallback: true
 		}
 	},
 	computed: {
+		fallbackFilename(): string {
+			return this.useFallback ? 'test.txt' : '';
+		}
 	},
 	methods: {
 		resetExample(): void {
 			this.selectBtnFieldvalue = null;
 			this.error = true;
 			this.errorMessages = ['Le champ est requis.'];
-		}
+		},
+
+		getFileFromApi(): Promise<AxiosResponse<Blob>> {
+			return new Promise((resolve) => {
+				resolve({
+					data: file,
+					status: 200,
+					statusText: 'OK',
+					headers: {},
+					config: {}
+				});
+			});
+		},
 	}
 });
 </script>
