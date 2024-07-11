@@ -65,6 +65,10 @@ import { HeaderBar } from "@cnamts/synapse-bridge";
 		 to:'/cookiesPage'
 	 },
 	 {
+		 label:'ChipList',
+		 to:'/ChipList'
+	 },
+	 {
 		 label: 'Password Field',
 		 to: '/password'
 	 },

@@ -51,7 +51,6 @@ import {defineComponent} from "vue";
 import {
 	CookieBanner,
 } from "@cnamts/synapse-bridge";
-import AppHeader from "@/pages/commons/AppHeader.vue";
 
 export default defineComponent({
 	components: {
