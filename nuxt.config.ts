@@ -13,7 +13,6 @@ export default defineNuxtConfig({
 	devtools: { enabled: true },
 	modules: [
 		'vuetify-nuxt-module',
-		'@nuxtjs/i18n',
 		'dayjs-nuxt',
 		'@pinia/nuxt',
 		'@nuxt/eslint',
