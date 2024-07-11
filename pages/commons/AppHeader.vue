@@ -21,6 +21,10 @@ import { HeaderBar } from "@cnamts/synapse-bridge";
 		 to:'/subHeader'
 	 },
 	 {
+		 label:'HeaderLoading',
+		 to:'/HeaderLoading'
+	 },
+	 {
 		 label:'Logo',
 		 to:'/logo'
 	 },
