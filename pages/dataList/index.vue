@@ -106,6 +106,7 @@ import {
 	DataList,
 	DataListGroup,
 } from "@cnamts/synapse-bridge";
+import { DataListActionEvent, DataListGroupItems } from '@cnamts/synapse-bridge/src/patterns/DataListGroup/types';
 
 export default defineComponent({
 	components: {
@@ -297,8 +298,8 @@ export default defineComponent({
 	computed: {
 	},
 	methods: {
-		updateBirthdate(itemIndex: number): void {
-			this.itemsWithActions[itemIndex].value = '01/01/1970'
+		updateBirthdate(item: DataListActionEvent): void {
+			this.itemsWithActions[item].value = '01/01/1970';
 		}
 	}
 });

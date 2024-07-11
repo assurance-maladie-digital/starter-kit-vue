@@ -21,7 +21,7 @@ import { HeaderBar } from "@cnamts/synapse-bridge";
 		 to: '/userMenuBtn'
 	 },
 	 {
-		 label: 'Dial Box',
+		 label: 'DialogBox',
 		 to: '/dialogBox'
 	 },
 	 {
@@ -33,7 +33,7 @@ import { HeaderBar } from "@cnamts/synapse-bridge";
 		 to: '/notificationBar'
 	 },
 	 {
-		 label: 'Period Field',
+		 label: 'PeriodField',
 		 to: '/periodfield'
 	 },
 	 {
