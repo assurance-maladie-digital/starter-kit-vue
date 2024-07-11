@@ -17,6 +17,10 @@ import { HeaderBar } from "@cnamts/synapse-bridge";
 		 to: '/headers'
 	 },
 	 {
+		 label:'SubHeader',
+		 to:'/subHeader'
+	 },
+	 {
 		 label: 'Btns',
 		 to: '/userMenuBtn'
 	 },
@@ -58,7 +62,7 @@ import { HeaderBar } from "@cnamts/synapse-bridge";
 	 },
 	 {
 		 label: 'Not Found',
-		 to: '/not-found',
+		 to: '/notFound',
 	 },
  ]
 
