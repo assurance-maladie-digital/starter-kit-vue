@@ -1,7 +1,7 @@
 <template>
 	<CookieBanner
 		v-if="active1"
-		cookies-route="/templates/cookies-page"
+		cookies-route="/cookiesPage"
 		@reject="active1 = false"
 		@accept="active1 = false"
 	/>
@@ -9,14 +9,14 @@
 	<CookieBanner
 		v-if="active2"
 		:vuetify-options="vuetifyOptions"
-		cookies-route="/templates/cookies-page"
+		cookies-route="/cookiesPage"
 		@reject="active2 = false"
 		@accept="active2 = false"
 	/>
 
 	<CookieBanner
 		v-if="active3"
-		cookies-route="/templates/cookies-page"
+		cookies-route="/cookiesPage"
 		@reject="active3 = false"
 		@accept="active3 = false"
 	>
@@ -65,23 +65,16 @@ export default defineComponent({
 				},
 				customizeBtn: {
 					variant: 'text',
-					outlined: false
 				},
 				rejectBtn: {
-					outlined: true
+					variant: 'outlined',
 				},
-				acceptBtn: {
-					outlined: true
-				}
+				acceptBtn: {}
 			},
 			active1:true,
 			active2: false,
 			active3: false
 		}
 	},
-	computed: {
-	},
-	methods: {
-	}
 });
 </script>
