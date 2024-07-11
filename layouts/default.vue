@@ -28,12 +28,5 @@ export default defineComponent({
 		HeaderBar,
 		FooterBar,
 	},
-	data() {
-		return {
-			navigationItems: [
-
-			],
-		}
-	},
 })
 </script>
