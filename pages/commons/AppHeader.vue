@@ -89,6 +89,10 @@ import { HeaderBar } from "@cnamts/synapse-bridge";
 		 to:'/skipLink'
 	 },
 	 {
+		 label:'RatingPicker',
+		 to:'/ratingPicker'
+	 },
+	 {
 		 label: 'Maintenance',
 		 to: '/maintenance',
 	 },
