@@ -29,6 +29,10 @@ import { HeaderBar } from "@cnamts/synapse-bridge";
 		 to:'/logo'
 	 },
 	 {
+		 label:'FooterWrapper',
+		 to:'/footerWrapper'
+	 },
+	 {
 		 label: 'Btns',
 		 to: '/userMenuBtn'
 	 },
