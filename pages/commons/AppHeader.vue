@@ -77,6 +77,10 @@ import { HeaderBar } from "@cnamts/synapse-bridge";
 		 to: '/password'
 	 },
 	 {
+		 label:'AlertWrapper',
+		 to:'/alertWrapper'
+	 },
+	 {
 		 label: 'Maintenance',
 		 to: '/maintenance',
 	 },
