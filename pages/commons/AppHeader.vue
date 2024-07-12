@@ -84,6 +84,10 @@ import { HeaderBar } from "@cnamts/synapse-bridge";
 		 label: 'Not Found',
 		 to: '/notFound',
 	 },
+	 {
+		 label: 'Error',
+		 to: '/error',
+	 },
  ]
 
 </script>
