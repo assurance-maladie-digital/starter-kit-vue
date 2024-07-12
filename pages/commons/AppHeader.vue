@@ -81,6 +81,10 @@ import { HeaderBar } from "@cnamts/synapse-bridge";
 		 to:'/alertWrapper'
 	 },
 	 {
+		 label:'PhoneField',
+		 to:'/phoneField'
+	 },
+	 {
 		 label: 'Maintenance',
 		 to: '/maintenance',
 	 },
