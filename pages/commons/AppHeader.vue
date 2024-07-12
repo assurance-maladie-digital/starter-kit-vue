@@ -85,6 +85,10 @@ import { HeaderBar } from "@cnamts/synapse-bridge";
 		 to:'/phoneField'
 	 },
 	 {
+		 label:'SkipLink',
+		 to:'/skipLink'
+	 },
+	 {
 		 label: 'Maintenance',
 		 to: '/maintenance',
 	 },
