@@ -22,7 +22,7 @@ import { HeaderBar } from "@cnamts/synapse-bridge";
 	 },
 	 {
 		 label:'HeaderLoading',
-		 to:'/HeaderLoading'
+		 to:'/headerLoading'
 	 },
 	 {
 		 label:'Logo',
@@ -91,6 +91,10 @@ import { HeaderBar } from "@cnamts/synapse-bridge";
 	 {
 		 label:'RatingPicker',
 		 to:'/ratingPicker'
+	 },
+	 {
+		 label: 'PaginatedTable',
+		 to: '/paginatedTable'
 	 },
 	 {
 		 label: 'Maintenance',
