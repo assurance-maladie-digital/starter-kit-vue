@@ -4,6 +4,8 @@
 	<ChipList
 		:items="items"
 		:overflow-limit="2"
+		@remove="console.log('remove', $event)"
+		@reset="console.log('reset')"
 	/>
 </template>
 
