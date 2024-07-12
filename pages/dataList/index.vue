@@ -41,7 +41,7 @@
 		<h2>Avec action</h2>
 		<DataList
 			:items="itemsWithActions"
-			@click:item-action="updateBirthdate"
+			@click:item-action="updateBirthdateDataList"
 		/>
 	</div>
 	<div class="d-flex">
@@ -84,12 +84,13 @@
 		<DataListGroup
 			:items="itemsList"
 			:icons="iconsList"
-			@click:list-item="updateBirthdate"
+			@click:list-item="updateBirthdateDataListGroup"
 		/>
 		<br /><br />
 		<DataListGroup
 			:items="itemsList"
 			item-width="300px"
+			@click:list-item="updateBirthdateDataListGroup"
 		/>
 		<br /><br />
 		<DataListGroup
@@ -295,11 +296,12 @@ export default defineComponent({
 			}
 		}
 	},
-	computed: {
-	},
 	methods: {
-		updateBirthdate(item: DataListActionEvent): void {
+		updateBirthdateDataList(item: DataListActionEvent): void {
 			this.itemsWithActions[item].value = '01/01/1970';
+		},
+		updateBirthdateDataListGroup({ dataListIndex, itemIndex }: DataListActionEvent): void {
+			this.itemsList[dataListIndex].items[itemIndex].value = '01/01/1970';
 		}
 	}
 });
