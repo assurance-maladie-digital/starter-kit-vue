@@ -48,6 +48,40 @@
 				<VListItemTitle>{{ item }}</VListItemTitle>
 			</VListItem>
 		</UserMenuBtn>
+		<br/><br/>
+		<UserMenuBtn full-name="Édith Cartier">
+			<template #content>
+				<VSheet>
+					<div class="pa-1">
+						<VListItem
+							v-for="(item, index) in items"
+							:key="index"
+						>
+							<VListItemTitle>{{ item }}</VListItemTitle>
+						</VListItem>
+					</div>
+
+					<VDivider />
+
+					<VBtn
+						class="primary-text font-weight-bold justify-start px-4"
+						height="56px"
+						variant="text"
+						large
+						block
+					>
+						<VIcon
+							color="primary"
+							class="mr-2"
+						>
+							{{ logoutIcon }}
+						</VIcon>
+
+						Lien perso
+					</VBtn>
+				</VSheet>
+			</template>
+		</UserMenuBtn>
 	</div>
 	<h2>France connect Btn</h2>
 	<div class="d-flex justify-sm-space-between">
@@ -209,7 +243,7 @@
 
 <script lang="ts">
 import {defineComponent} from "vue";
-import { mdiContentDuplicate, mdiChevronLeft } from "@mdi/js";
+import { mdiContentDuplicate, mdiChevronLeft, mdiLogout } from "@mdi/js";
 import {
 	BackBtn,
 	FranceConnectBtn,
@@ -243,6 +277,7 @@ export default defineComponent({
 		return {
 			backIcon:mdiChevronLeft,
 			mdiContentDuplicate: mdiContentDuplicate,
+			logoutIcon: mdiLogout,
 			items: [
 				'Administration',
 				'Profil',
