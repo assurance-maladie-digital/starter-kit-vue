@@ -105,6 +105,10 @@ import { HeaderBar } from "@cnamts/synapse-bridge";
 		 to: '/rangeField'
 	 },
 	 {
+		 label: 'ExternalLinks',
+		 to: '/externalLinks'
+	 },
+	 {
 		 label: 'Maintenance',
 		 to: '/maintenance',
 	 },
