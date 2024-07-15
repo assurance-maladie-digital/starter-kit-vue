@@ -109,6 +109,10 @@ import { HeaderBar } from "@cnamts/synapse-bridge";
 		 to: '/externalLinks'
 	 },
 	 {
+		 label: 'PasswordField',
+		 to: '/passwordField'
+	 },
+	 {
 		 label: 'Maintenance',
 		 to: '/maintenance',
 	 },
