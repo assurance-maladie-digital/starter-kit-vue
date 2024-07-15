@@ -146,7 +146,7 @@ export default defineComponent({
 			},
 
 			snackbar: false,
-			snackbarText: null as string | null,
+			snackbarText: null as string | null | undefined,
 			snackbarColor: 'success',
 
 			errorsText: {
