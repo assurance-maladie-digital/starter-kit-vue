@@ -101,6 +101,10 @@ import { HeaderBar } from "@cnamts/synapse-bridge";
 		 to: '/tableToolbar'
 	 },
 	 {
+		 label: 'RangeField',
+		 to: '/rangeField'
+	 },
+	 {
 		 label: 'Maintenance',
 		 to: '/maintenance',
 	 },
