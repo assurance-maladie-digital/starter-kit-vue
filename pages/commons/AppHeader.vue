@@ -97,6 +97,10 @@ import { HeaderBar } from "@cnamts/synapse-bridge";
 		 to: '/paginatedTable'
 	 },
 	 {
+		 label: 'TableToolbar',
+		 to: '/tableToolbar'
+	 },
+	 {
 		 label: 'Maintenance',
 		 to: '/maintenance',
 	 },
