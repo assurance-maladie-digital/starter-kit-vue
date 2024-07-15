@@ -129,6 +129,10 @@ import { HeaderBar } from "@cnamts/synapse-bridge";
 		 to: '/fileUpload',
 	 },
 	 {
+		 label: 'UploadWorkflow',
+		 to: '/uploadWorkflow',
+	 },
+	 {
 		 label: 'Maintenance',
 		 to: '/maintenance',
 	 },
