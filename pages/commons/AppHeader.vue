@@ -121,6 +121,10 @@ import { HeaderBar } from "@cnamts/synapse-bridge";
 		 to: '/searchListField',
 	 },
 	 {
+		 label: 'FileList',
+		 to: '/fileList',
+	 },
+	 {
 		 label: 'Maintenance',
 		 to: '/maintenance',
 	 },
