@@ -113,6 +113,10 @@ import { HeaderBar } from "@cnamts/synapse-bridge";
 		 to: '/passwordField'
 	 },
 	 {
+		 label: 'CustomIcon',
+		 to: '/customIcon',
+	 },
+	 {
 		 label: 'Maintenance',
 		 to: '/maintenance',
 	 },
