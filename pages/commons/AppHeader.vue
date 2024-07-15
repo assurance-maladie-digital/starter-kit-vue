@@ -133,6 +133,10 @@ import { HeaderBar } from "@cnamts/synapse-bridge";
 		 to: '/uploadWorkflow',
 	 },
 	 {
+		 label: 'FiltersSideBar',
+		 to: '/filtersSideBar',
+	 },
+	 {
 		 label: 'Maintenance',
 		 to: '/maintenance',
 	 },
