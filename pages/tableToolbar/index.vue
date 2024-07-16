@@ -1,6 +1,6 @@
 <template>
 	<div>
-		<v-data-table
+		<VDataTable
 			:headers="headers"
 			:items="items"
 			:search="search"
@@ -33,8 +33,8 @@
 			<template #bottom>
 				<!-- Leave this slot empty to hide pagination controls -->
 			</template>
-		</v-data-table>
-		<v-switch v-model="loading"></v-switch>
+		</VDataTable>
+		<VSwitch v-model="loading"></VSwitch>
 	</div>
 </template>
 

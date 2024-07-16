@@ -141,6 +141,10 @@ import { HeaderBar } from "@cnamts/synapse-bridge";
 		 to: '/filtersInline',
 	 },
 	 {
+		 label: 'FilterModule',
+		 to: '/filterModule',
+	 },
+	 {
 		 label: 'Maintenance',
 		 to: '/maintenance',
 	 },
