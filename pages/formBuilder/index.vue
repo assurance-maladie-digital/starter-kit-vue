@@ -1,19 +1,23 @@
 <template>
 	<h2>FormBuilder</h2>
 	<FormBuilder v-model="form" />
-	{{ form }}
+	<pre>{{ form }}</pre>
 
 	<br/><br/><br/>
 
 	<h2>FormFieldList</h2>
-	<FormFieldList v-model="fields" />
-	{{ fields }}
+	<FormFieldList
+		v-model="fields"
+		list-title="Votre état de santé"
+		description="Vos symptômes et leur date d’apparition."
+	/>
+	<pre>{{ fields }}</pre>
 
 	<br/><br/><br/>
 
 	<h2>FormField</h2>
 	<FormField v-model="field" />
-	{{ field }}
+	<pre>{{ field }}</pre>
 </template>
 
 <script lang="ts">
@@ -256,9 +260,243 @@ export default defineComponent({
 				}
 			} as Fields,
 
-			field: {
+			/*field: {
+				type: 'text',
+				value: null,
+				fieldOptions: {
+					label: 'Votre nom',
+					hideDetails: true,
+					variant: 'outlined'
+				}
+			} as Field*/
+
+			/*field: {
+				type: 'textarea',
+				title: 'Vos symptômes',
+				description: 'Décrivez les symptômes qui vous affectent et leur ordre d’apparition.',
+				value: null,
+				fieldOptions: {
+					label: 'Décrivez vos symptômes',
+					hideDetails: true,
+					variant: 'outlined'
+				}
+			} as Field*/
+
+			/*field: {
+				type: 'number',
+				value: null,
+				fieldOptions: {
+					label: 'Votre âge',
+					hideDetails: true,
+					variant: 'outlined',
+					mask: '###'
+				}
+			} as Field*/
+
+			/*field: {
+				type: 'password',
+				value: null,
+				fieldOptions: {
+					label: 'Votre mot de passe',
+					hideDetails: true,
+					variant: 'outlined'
+				}
+			} as Field*/
+
+			/*field: {
+				type: 'date',
+				value: null,
+				fieldOptions: {
+					label: 'Votre date de naissance',
+					variant: 'outlined',
+				}
+			} as Field*/
+
+			/*field: {
 				type: 'period',
-				value: []
+				value: [],
+			} as Field*/
+
+			/*field: {
+				type: 'range',
+				min: 0,
+				max: 100,
+				value: null,
+				fieldOptions: {
+					variant: 'outlined',
+				}
+			} as Field*/
+
+			/*field: {
+				type: 'select',
+				dynamic: true,
+				items: [
+					{
+						text: 'Email',
+						value: 'email'
+					},
+					{
+						text: 'Courrier',
+						value: 'mail'
+					},
+					{
+						text: 'SMS',
+						value: 'sms'
+					}
+				],
+				value: null,
+				fieldOptions: {
+					label: 'Moyen de contact',
+					hideDetails: true,
+					variant: 'outlined'
+				}
+			} as Field*/
+
+			/*field:  {
+				type: 'select',
+				items: [
+					{
+						text: '1 an',
+						value: 1
+					},
+					{
+						text: '2 ans',
+						value: 2
+					},
+					{
+						text: '3 ans',
+						value: 3
+					},
+					{
+						text: '4 ans',
+						value: 4
+					}
+				],
+				value: null,
+				fieldOptions: {
+					type: 'choiceSlider',
+					label: 'Durée',
+					hideDetails: true
+				}
+			} as Field*/
+
+			/*field: {
+				type: 'select',
+				items: [
+					{
+						text: '1 an',
+						value: 1
+					},
+					{
+						text: '2 ans',
+						value: 2
+					},
+					{
+						text: '3 ans',
+						value: 3
+					},
+					{
+						text: '4 ans',
+						value: 4
+					}
+				],
+				value: null,
+				fieldOptions: {
+					type: 'choiceSlider',
+					label: 'Durée',
+					hideDetails: true,
+					thumbLabel: true,
+					thumbSize: '36px'
+				}
+			} as Field*/
+
+			/*field: {
+				type: 'select',
+				items: [
+					{
+						text: 'Email',
+						value: 'email'
+					},
+					{
+						text: 'Courrier',
+						value: 'mail'
+					},
+					{
+						text: 'SMS',
+						value: 'sms'
+					}
+				],
+				value: null,
+				fieldOptions: {
+					type: 'choiceButton',
+					label: 'Moyen de contact',
+					hideDetails: true,
+					outlined: true
+				}
+			} as Field*/
+
+			/*field: {
+				type: 'select',
+				items: [
+					{
+						text: 'Email',
+						value: 'email'
+					},
+					{
+						text: 'Courrier',
+						value: 'mail'
+					},
+					{
+						text: 'SMS',
+						value: 'sms'
+					},
+					{
+						text: 'Autre',
+						value: 'other'
+					}
+				],
+				value: null,
+				other: {
+					label: 'Saisir autre moyen de contact',
+					selectedChoice: 'other'
+				},
+				fieldOptions: {
+					type: 'choiceButton',
+					label: 'Moyen de contact',
+					hideDetails: true,
+					outlined: true
+				}
+			} as Field*/
+
+			field: {
+				type: 'select',
+				multiple: true,
+				items: [
+					{
+						text: 'Email',
+						value: 'email'
+					},
+					{
+						text: 'Courrier',
+						value: 'mail'
+					},
+					{
+						text: 'SMS',
+						value: 'sms'
+					},
+					{
+						text: 'Autre',
+						value: 'other',
+						alone: true
+					}
+				],
+				value: null,
+				fieldOptions: {
+					type: 'choiceButton',
+					label: 'Moyen de contact',
+					hideDetails: true,
+					outlined: true
+				}
 			} as Field
 		};
 	},
