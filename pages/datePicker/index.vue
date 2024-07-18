@@ -61,7 +61,6 @@ import dayjs from "dayjs";
 import {
 	DatePicker,
 } from "@cnamts/synapse-bridge";
-import AppHeader from "@/pages/commons/AppHeader.vue";
 
 export default defineComponent({
 	components: {
