@@ -32,6 +32,7 @@
 		<template #updated-at="{ attrs }">
 			<DatePicker
 				v-bind="attrs"
+				v-model="date"
 				label="Date de mise à jour"
 				outlined
 			/>
@@ -141,6 +142,8 @@ export default defineComponent({
 					value: "pharmacien",
 				},
 			],
+
+			date: dayjs().toDate(),
 		};
 	},
 });
