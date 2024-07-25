@@ -1,5 +1,5 @@
 <template>
-	<FiltersInline v-model="filters">
+	<FiltersInline v-model="filters" @update:modelValue="getValue">
 		<template #name="{ attrs }">
 			<VTextField
 				v-bind="attrs"
@@ -108,5 +108,10 @@ export default defineComponent({
 			],
 		};
 	},
+	methods: {
+		getValue(value: string): void {
+			console.log(value);
+		}
+	}
 });
 </script>
