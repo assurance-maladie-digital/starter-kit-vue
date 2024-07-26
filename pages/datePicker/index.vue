@@ -53,7 +53,7 @@
 
 <script lang="ts">
 import {defineComponent} from "vue";
-import {mapActions, mapGetters} from "vuex";
+
 import {required} from "@cnamts/synapse-bridge/rules/required";
 import {notAfterToday} from "@cnamts/synapse-bridge/rules/notAfterToday";
 import {notBeforeToday} from "@cnamts/synapse-bridge/rules/notBeforeToday";
@@ -157,25 +157,7 @@ export default defineComponent({
 			defaultHint: "Format JJ/MM/YYYY",
 		}
 	},
-	computed: {
-		...mapGetters('notification', {
-			notification: 'notification',
-		}),
-	},
 	methods: {
-		...mapActions('notification', {
-			dispatchNotification: 'addNotification',
-			dispatchClearNotification: 'clearNotification',
-		}),
-		createNotification(): void {
-			this.dispatchNotification({
-				type: 'info',
-				message: 'Exemple de notification.',
-			})
-		},
-		removeNotification(): void {
-			this.dispatchClearNotification();
-		},
 		getValue(value: string): void {
 			console.log(value);
 		}
