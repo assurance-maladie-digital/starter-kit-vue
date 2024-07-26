@@ -27,9 +27,9 @@
 import {defineComponent} from "vue";
 import {
 	PaginatedTable,
+	StateEnum
 } from "@cnamts/synapse-bridge";
 
-import { StateEnum } from '@cnamts/synapse-bridge/src/constants/enums/StateEnum';
 import { DataOptions } from "@cnamts/synapse-bridge/src/patterns/PaginatedTable/types";
 
 interface User {

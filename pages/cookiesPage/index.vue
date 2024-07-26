@@ -6,9 +6,9 @@
 import {defineComponent} from "vue";
 import {
 	CookiesPage,
+	TypeEnum
 } from "@cnamts/synapse-bridge";
 
-import { TypeEnum } from '@cnamts/synapse-bridge/src/templates/CookiesPage/CookiesInformation/TypeEnum';
 import { CookiesPageItems } from '@cnamts/synapse-bridge/src/templates/CookiesPage/types';
 
 export default defineComponent({
