@@ -70,11 +70,11 @@ import { HeaderBar } from "@cnamts/synapse-bridge";
 	 },
 	 {
 		 label:'ChipList',
-		 to:'/ChipList'
+		 to:'/chipList'
 	 },
 	 {
-		 label: 'Password Field',
-		 to: '/password'
+		 label: 'PasswordField',
+		 to: '/passwordField'
 	 },
 	 {
 		 label:'AlertWrapper',
