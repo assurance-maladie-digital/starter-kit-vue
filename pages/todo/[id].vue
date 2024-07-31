@@ -26,7 +26,7 @@ const { data, status, error } = useFetchTodo(id)
 			<p class="mb-8">{{ data.completed ? 'Cette tache a été complété avec succès' : 'Cette tache doit toujours être effectuée' }}</p>
 
 			<div class="d-flex justify-end">
-				<VBtn color="primary" @click="$router.push(`/fetchData/${data.id + 1}`)">Tache suivante</VBtn>
+				<VBtn color="primary" @click="$router.push(`/todo/${data.id + 1}`)">Tache suivante</VBtn>
 			</div>
 		</div>
 
