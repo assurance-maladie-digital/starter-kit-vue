@@ -43,10 +43,7 @@ export default defineNuxtConfig({
 		// change the component dirs to match our project layout
 		plugins: [Components({ dts: true, dirs: ['./components'] })],
 	},
-	css: [
-		'@cnamts/synapse-bridge/style.css',
-		'~/assets/settings.scss'
-	],
+	css: ['@cnamts/synapse-bridge/style.css', '~/assets/settings.scss'],
 	imports: {
 		dirs: ['./stores'],
 	},
