@@ -48,7 +48,10 @@ export default defineComponent({
 				{
 					label: 'Erreur',
 					to: '/not-found',
-				},
+				},{
+					label: 'SSR fetch demo',
+					to: '/todo/1',
+				}
 			],
 		}
 	},
