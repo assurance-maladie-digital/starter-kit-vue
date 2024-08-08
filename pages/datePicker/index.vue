@@ -46,7 +46,7 @@
 		<date-picker v-model="dateToFormat" dateFormat="DD-MM-YYYY" hint="JJ-MM-YYYY" label="Date"/>
 		<h3 class="mt-4">DateFormatReturn JJ/MM/YY</h3>
 		{{ dateFormatReturn }}
-		<date-picker v-model="dateFormatReturn" :hint="defaultHint" dateFormatReturn="DD/MM/YY" label="Date"/>
+		<date-picker v-model="dateFormatReturn" :warning-rules="warningRules" :hint="defaultHint" dateFormatReturn="DD/MM/YY" label="Date"/>
 		</div>
 	</div>
 </template>
@@ -54,9 +54,7 @@
 <script lang="ts">
 import {defineComponent} from "vue";
 
-import {required} from "@cnamts/synapse-bridge/rules/required";
-import {notAfterToday} from "@cnamts/synapse-bridge/rules/notAfterToday";
-import {notBeforeToday} from "@cnamts/synapse-bridge/rules/notBeforeToday";
+import {required, notAfterToday, notBeforeToday, notBeforeDate} from "@cnamts/synapse-bridge";
 import dayjs from "dayjs";
 import {
 	DatePicker,
@@ -69,7 +67,7 @@ export default defineComponent({
 	data() {
 		return {
 			validRules: [required],
-			warningRules: [notAfterToday, notBeforeToday],
+			warningRules: [notBeforeDate('06/07/2024')],
 			active: true,
 			dialog: false,
 			chipItems: [
