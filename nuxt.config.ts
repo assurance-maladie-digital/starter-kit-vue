@@ -15,6 +15,7 @@ export default defineNuxtConfig({
 		'vuetify-nuxt-module',
 		'dayjs-nuxt',
 		'@pinia/nuxt',
+		'nuxt3-vuex-module',
 		'@nuxt/eslint',
 	],
 	vuetify: {
