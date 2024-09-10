@@ -1,10 +1,6 @@
 <template>
 	<VApp>
-		<HeaderBar
-			service-title="Titre du service"
-			service-sub-title="Description du service"
-			:navigation-items="navigationItems"
-		/>
+		<AppHeader/>
 		<PageContainer>
 			<slot />
 		</PageContainer>
@@ -23,34 +19,14 @@
 <script lang="ts">
 import { defineComponent } from 'vue'
 import { PageContainer, HeaderBar, FooterBar } from '@cnamts/synapse-bridge'
+import AppHeader from "~/pages/commons/AppHeader.vue";
 
 export default defineComponent({
 	components: {
+		AppHeader,
 		PageContainer,
 		HeaderBar,
 		FooterBar,
-	},
-	data() {
-		return {
-			navigationItems: [
-				{
-					label: 'Accueil',
-					to: '/home',
-				},
-				{
-					label: 'Tokens',
-					to: '/tokens',
-				},
-				{
-					label: 'Maintenance',
-					to: '/maintenance',
-				},
-				{
-					label: 'Erreur',
-					to: '/not-found',
-				},
-			],
-		}
 	},
 })
 </script>
