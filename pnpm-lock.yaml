@@ -42,7 +42,7 @@ importers:
         specifier: ^1.2.1
         version: 1.6.0(@types/node@18.19.38)(happy-dom@13.10.1)(sass@1.77.6)(terser@5.31.1)
       vuetify:
-        specifier: ^3.5.10
+        specifier: ^3.5.12
         version: 3.6.10(typescript@5.5.2)(vite-plugin-vuetify@2.0.3)(vue-i18n@9.13.1(vue@3.4.29(typescript@5.5.2)))(vue@3.4.29(typescript@5.5.2))
       vuetify-nuxt-module:
         specifier: ^0.14.1
