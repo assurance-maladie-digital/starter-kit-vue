@@ -1,17 +1,14 @@
 # **Starter Kit Vue/Nuxt 3**
 
-=
-
 🗃️ Ce Starter Kit contient les composants du Design System de l'Assurance Maladie réécrits en Vue 3, ainsi que les outils nécessaires pour mettre en place un nouveau projet.
 
 ## Prérequis
 
 SSR désactivé.
 
-Pour utiliser ce starter kit, vous devez avoir au moins les versions suivantes de Node et PNPM :
+Pour utiliser ce starter kit, vous devez avoir au moins la version suivante de Node :
 
 -   Node : 20.11.0
--   PNPM : 8.11.0
 
 ## Stack Technique
 
