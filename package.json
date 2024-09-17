@@ -2,8 +2,7 @@
 	"name": "starter-kit-vue-synpase",
 	"private": true,
 	"engines": {
-		"node": ">=20.11.0",
-		"pnpm": ">=8.11.0"
+		"node": ">=20.11.0"
 	},
 	"scripts": {
 		"build": "nuxi build",
