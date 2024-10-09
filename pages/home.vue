@@ -28,7 +28,7 @@
 					<v-card-title>Exemple de composant DS</v-card-title>
 					<v-card-item>
 						<BackBtn to="/home" />
-						<br/>
+						<br />
 						<VBtn color="secondary">Bouton secondaire</VBtn>
 						<br />
 						<br />

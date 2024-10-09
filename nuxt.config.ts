@@ -1,59 +1,74 @@
-import { colorTheme } from '@cnamts/design-tokens/src/colors'
+import { cnamLightTheme } from '@cnamts/synapse/designTokens/tokens/cnam/cnamLightTheme.ts'
 import Components from 'unplugin-vue-components/vite'
 
 export default defineNuxtConfig({
-	ssr: false,
-	runtimeConfig: {
-		public: {
-			title: process.env.TITLE,
-			message: process.env.MESSAGE,
-			theme: process.env.THEME,
-		},
-	},
-	devtools: { enabled: true },
-	modules: [
-		'vuetify-nuxt-module',
-		'dayjs-nuxt',
-		'@pinia/nuxt',
-		'@nuxt/eslint',
-	],
-	vuetify: {
-		vuetifyOptions: {
-			icons: {
-				defaultSet: 'mdi-svg',
-			},
-			theme: {
-				defaultTheme: 'light',
-				themes: {
-					light: {
-						colors: colorTheme,
+ ssr: false,
+
+ runtimeConfig: {
+					public: {
+									title: process.env.TITLE,
+									message: process.env.MESSAGE,
+									theme: process.env.THEME,
 					},
-				},
-			},
-		},
 	},
-	build: {
-		transpile: [
-			'vuetify',
-			'@cnamts/synapse',
-			'@cnamts/design-tokens',
-		],
+
+ devtools: { enabled: true },
+
+ modules: [
+					'vuetify-nuxt-module',
+					'dayjs-nuxt',
+					'@pinia/nuxt',
+					'@nuxt/eslint',
+	],
+
+ vuetify: {
+					vuetifyOptions: {
+									icons: {
+													defaultSet: 'mdi-svg',
+									},
+									theme: {
+													defaultTheme: 'light',
+													themes: {
+																	light: {
+																		colors: {
+																			...cnamLightTheme,
+																			// ...bootstrapLightTheme,
+																		},
+																	},
+													},
+									},
+					},
 	},
-	vite: {
-		// change the component dirs to match our project layout
-		plugins: [Components({ dts: true, dirs: ['./components'] })],
+
+ build: {
+					transpile: [
+									'vuetify',
+									'@cnamts/synapse',
+									'@cnamts/design-tokens',
+					],
 	},
-	css: ['@cnamts/synapse/style.css', '~/assets/settings.scss'],
-	imports: {
-		dirs: ['./stores'],
+
+ vite: {
+					// change the component dirs to match our project layout
+					plugins: [Components({ dts: true, dirs: ['./components'] })],
 	},
-	dayjs: {
-		locales: ['en', 'fr'],
-		plugins: ['relativeTime', 'utc', 'timezone'],
-		defaultLocale: 'fr',
-		defaultTimezone: 'Europe/Paris',
+
+ css: ['@cnamts/synapse/style.css', '~/assets/settings.scss'],
+
+ imports: {
+					dirs: ['./stores'],
 	},
-	pinia: {
-		autoImports: ['defineStore', 'acceptHMRUpdate'],
+
+ dayjs: {
+					locales: ['en', 'fr'],
+					plugins: ['relativeTime', 'utc', 'timezone'],
+					defaultLocale: 'fr',
+					defaultTimezone: 'Europe/Paris',
 	},
+
+ pinia: {
+					autoImports: ['defineStore', 'acceptHMRUpdate'],
+	},
+
+ compatibilityDate: '2024-10-09',
 })
