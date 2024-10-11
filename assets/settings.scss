@@ -87,7 +87,7 @@
 );
 
 @import './fonts.scss';
-@import '@cnamts/design-tokens/dist/tokens';
+@import '@cnamts/synapse/src/assets/tokens.scss';
 
 /* Default, global styles */
 * {
@@ -113,5 +113,5 @@ body {
 /* Apply default transition to links */
 a {
 	transition: 0.25s;
-	color: $vd-primary;
+	color: $primary-base;
 }
